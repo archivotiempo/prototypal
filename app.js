@@ -1,25 +1,5 @@
 const sectionButtons = document.querySelectorAll(".nav button");
 const sections = document.querySelectorAll(".section");
-const chips = document.querySelectorAll(".chip");
-const postits = document.querySelectorAll(".postit");
-const drawer = document.getElementById("drawer");
-const drawerBackdrop = document.getElementById("drawerBackdrop");
-const drawerClose = document.getElementById("drawerClose");
-const drawerCategory = document.getElementById("drawerCategory");
-const drawerTitle = document.getElementById("drawerTitle");
-const drawerDetail = document.getElementById("drawerDetail");
-const drawerBullets = document.getElementById("drawerBullets");
-const drawerPriority = document.getElementById("drawerPriority");
-const statNumbers = document.querySelectorAll(".stat strong");
-
-const categoryNames = {
-  jobs: "Customer Jobs · Trabajos del usuario",
-  pains: "Pains · Frustraciones",
-  gains: "Gains · Alegrías",
-  products: "Productos y servicios",
-  relievers: "Pain Relievers · Aliviadores",
-  creators: "Gain Creators · Creadores"
-};
 
 function showSection(id, updateHash = true) {
   sections.forEach((section) => {
@@ -30,64 +10,18 @@ function showSection(id, updateHash = true) {
     button.classList.toggle("active", button.dataset.section === id);
   });
 
-  if (updateHash) {
-    history.replaceState(null, "", `#${id}`);
-  }
+  if (updateHash) history.replaceState(null, "", `#${id}`);
 
-  const main = document.querySelector("main");
-  if (main) {
+  const activeSection = document.getElementById(id);
+  if (activeSection) {
     requestAnimationFrame(() => {
-      document.querySelectorAll(`#${id} .reveal`).forEach((element) => {
+      activeSection.querySelectorAll(".reveal").forEach((element) => {
         element.classList.add("is-visible");
       });
-      main.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (id === "hipotesis") createRadarChart();
+      activeSection.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
-  closeDrawer();
-}
-
-function closeDrawer() {
-  drawer.classList.remove("open");
-  drawer.setAttribute("aria-hidden", "true");
-  drawerBackdrop.hidden = true;
-}
-
-function openDrawer(postit) {
-  const type = postit.dataset.type;
-  const bullets = (postit.dataset.bullets || "").split("|").filter(Boolean);
-
-  drawerCategory.textContent = categoryNames[type] || "Elemento del canvas";
-  drawerTitle.textContent = postit.dataset.title || "";
-  drawerDetail.textContent = postit.dataset.detail || "";
-  drawerPriority.textContent = `Prioridad: ${postit.dataset.priority || "Sin definir"}`;
-  drawerBullets.innerHTML = "";
-
-  bullets.forEach((text) => {
-    const item = document.createElement("li");
-    item.textContent = text;
-    drawerBullets.appendChild(item);
-  });
-
-  drawerBackdrop.hidden = false;
-  drawer.classList.add("open");
-  drawer.setAttribute("aria-hidden", "false");
-  drawerClose.focus();
-}
-
-function setFilter(filter, activeChip) {
-  chips.forEach((chip) => {
-    chip.classList.toggle("active", chip === activeChip);
-  });
-
-  postits.forEach((postit) => {
-    const visible = filter === "all" || postit.dataset.type === filter;
-    postit.classList.toggle("hidden-by-filter", !visible);
-  });
-
-  document.querySelectorAll(".canvas-panel").forEach((panel) => {
-    const hasVisibleItems = panel.querySelector(".postit:not(.hidden-by-filter)");
-    panel.style.opacity = hasVisibleItems ? "1" : ".45";
-  });
 }
 
 sectionButtons.forEach((button) => {
@@ -101,44 +35,198 @@ document.querySelectorAll("[data-go]").forEach((button) => {
   });
 });
 
-chips.forEach((chip) => {
-  chip.addEventListener("click", () => setFilter(chip.dataset.filter, chip));
-});
-
-postits.forEach((postit) => {
-  postit.addEventListener("click", () => openDrawer(postit));
-});
-
-drawerClose.addEventListener("click", closeDrawer);
-drawerBackdrop.addEventListener("click", closeDrawer);
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeDrawer();
+const prototypeSteps = [
+  {
+    label: "Fase 1 de 5",
+    pill: "Entrada narrativa",
+    icon: "🏺",
+    title: "El aviso del Archivo",
+    text: "El alumnado recibe una carta del Archivo de la Historia. Una pieza temporal se ha desordenado y deben restaurarla para desbloquear el sello de la era.",
+    roles: ["Lector/a", "Guardián/a del tiempo"],
+    tasks: ["Carta de misión en lectura fácil", "Mapa visual de la era", "Objetivo expresado en una frase"],
+    fa: "fa-scroll"
+  },
+  {
+    label: "Fase 2 de 5",
+    pill: "Exploración del reto",
+    icon: "🧩",
+    title: "Piezas fuera de lugar",
+    text: "El grupo manipula piezas históricas, símbolos y pistas visuales. Deben observar, comparar y relacionar elementos para encontrar una secuencia lógica.",
+    roles: ["Observador/a", "Constructor/a"],
+    tasks: ["Piezas grandes y manipulables", "Colores y símbolos redundantes", "Apoyo visual para ordenar"],
+    fa: "fa-puzzle-piece"
+  },
+  {
+    label: "Fase 3 de 5",
+    pill: "Pistas graduadas",
+    icon: "🔎",
+    title: "Ayuda sin resolver",
+    text: "Si aparece bloqueo, se ofrecen tres niveles de pista: recordar la misión, señalar una estrategia y mostrar una ayuda parcial sin dar la solución completa.",
+    roles: ["Pidepistas", "Comprobador/a"],
+    tasks: ["Pista 1: orientación", "Pista 2: estrategia", "Pista 3: apoyo concreto"],
+    fa: "fa-magnifying-glass"
+  },
+  {
+    label: "Fase 4 de 5",
+    pill: "Validación final",
+    icon: "🔐",
+    title: "El candado simbólico",
+    text: "La solución permite abrir un candado, activar una validación o descubrir una palabra clave. El objetivo es cerrar el reto con una comprobación inmediata.",
+    roles: ["Validador/a", "Portavoz"],
+    tasks: ["Código final claro", "Feedback inmediato", "Error permitido sin penalización"],
+    fa: "fa-lock-open"
+  },
+  {
+    label: "Fase 5 de 5",
+    pill: "Logro visible",
+    icon: "📜",
+    title: "Sello en el pasaporte",
+    text: "Al superar la misión, el alumnado recibe un sello o insignia en su pasaporte. El logro se convierte en evidencia física y emocional del aprendizaje.",
+    roles: ["Archivista", "Sellador/a"],
+    tasks: ["Pasaporte del Explorador", "Mini cierre emocional", "Pregunta: ¿qué hemos conseguido?"],
+    fa: "fa-stamp"
   }
-});
+];
 
-const printButton = document.getElementById("printBtn");
-if (printButton) {
-  printButton.addEventListener("click", () => window.print());
-}
+const stepsEl = document.getElementById("steps");
+const rolesEl = document.getElementById("roles");
+const taskListEl = document.getElementById("taskList");
 
-const resetButton = document.getElementById("resetBtn");
-if (resetButton) {
-  resetButton.addEventListener("click", () => {
-    const allChip = document.querySelector('.chip[data-filter="all"]');
-    setFilter("all", allChip);
-    closeDrawer();
-    showSection("canvas");
+function renderStep(index) {
+  const step = prototypeSteps[index];
+  document.getElementById("screenLabel").textContent = step.label;
+  document.getElementById("screenPill").textContent = step.pill;
+  document.getElementById("eraIcon").textContent = step.icon;
+  document.getElementById("screenTitle").textContent = step.title;
+  document.getElementById("screenText").textContent = step.text;
+  document.getElementById("progressBar").style.width = `${((index + 1) / prototypeSteps.length) * 100}%`;
+
+  rolesEl.innerHTML = step.roles.map((role) => `<span class="role">${role}</span>`).join("");
+  taskListEl.innerHTML = step.tasks.map((task) => `
+    <div class="task">
+      <span><i class="fa-solid fa-check"></i></span>
+      <b>${task}</b>
+    </div>
+  `).join("");
+
+  document.querySelectorAll(".step-btn").forEach((button, buttonIndex) => {
+    button.classList.toggle("active", buttonIndex === index);
   });
 }
 
-const adaptationCount = document.getElementById("adaptationCount");
-if (adaptationCount) {
-  adaptationCount.textContent = postits.length;
+if (stepsEl) {
+  stepsEl.innerHTML = prototypeSteps.map((step, index) => `
+    <button class="step-btn ${index === 0 ? "active" : ""}" type="button" data-step="${index}">
+      <i class="fa-solid ${step.fa}"></i>
+      <span><strong>${step.pill}</strong><small>${step.title}</small></span>
+    </button>
+  `).join("");
+
+  stepsEl.addEventListener("click", (event) => {
+    const button = event.target.closest(".step-btn");
+    if (button) renderStep(Number(button.dataset.step));
+  });
+
+  renderStep(0);
 }
 
-document.querySelectorAll(".canvas-panel, .priority-card, .flow-step, .insight-card, .fit-strip, .executive, .result-bars-wrap").forEach((element) => {
+const feedback = {
+  alumnado: {
+    label: "Percepción del alumnado",
+    title: "Preguntas al alumnado",
+    text: "¿Has entendido la misión? ¿Qué parte te ha gustado más? ¿En qué momento has necesitado ayuda? ¿Te has sentido importante dentro del equipo? ¿Quieres jugar otra era?",
+    meters: [["Claridad", 82], ["Motivación", 90], ["Sensación de logro", 88], ["Participación", 84]]
+  },
+  docente: {
+    label: "Observación docente",
+    title: "Preguntas al docente",
+    text: "¿La actividad permite observar competencias STEAM? ¿Los apoyos son suficientes? ¿El reto mantiene nivel educativo? ¿Qué barreras aparecen? ¿Qué cambiarías antes de repetirlo?",
+    meters: [["Utilidad didáctica", 86], ["Facilidad de implementación", 74], ["Inclusión", 88], ["Evaluación", 78]]
+  },
+  prototipo: {
+    label: "Aprendizajes de diseño",
+    title: "Qué cambió tras el piloto",
+    text: "El testeo inicial mostró que la narrativa motiva, pero debe separarse de las instrucciones; los roles necesitan acciones más visibles; y las pistas funcionan mejor cuando orientan primero y concretan después.",
+    meters: [["Coherencia", 90], ["Escalabilidad", 76], ["Accesibilidad", 86], ["Rigor de medición", 80]]
+  }
+};
+
+const metersEl = document.getElementById("meters");
+
+function renderFeedback(key) {
+  const item = feedback[key];
+  document.getElementById("feedbackLabel").textContent = item.label;
+  document.getElementById("feedbackTitle").textContent = item.title;
+  document.getElementById("feedbackText").textContent = item.text;
+
+  metersEl.innerHTML = item.meters.map(([label, value]) => `
+    <div class="meter-row">
+      <span>${label}</span>
+      <div class="bar"><span style="width:${value}%"></span></div>
+      <strong>${value}%</strong>
+    </div>
+  `).join("");
+
+  document.querySelectorAll(".tab").forEach((tab) => {
+    tab.classList.toggle("active", tab.dataset.feedback === key);
+  });
+}
+
+const tabs = document.querySelector(".tabs");
+if (tabs) {
+  tabs.addEventListener("click", (event) => {
+    const tab = event.target.closest(".tab");
+    if (tab) renderFeedback(tab.dataset.feedback);
+  });
+  renderFeedback("alumnado");
+}
+
+let radarChart;
+
+function createRadarChart() {
+  const chartEl = document.getElementById("radarChart");
+  if (!chartEl || !window.Chart || radarChart) return;
+
+  radarChart = new Chart(chartEl, {
+    type: "radar",
+    data: {
+      labels: ["Comprensión", "Participación", "Autonomía", "Colaboración", "Regulación", "Logro"],
+      datasets: [
+        {
+          label: "Resultado esperado",
+          data: [4, 4, 3, 4, 3, 4],
+          fill: true,
+          backgroundColor: "rgba(180, 83, 9, .16)",
+          borderColor: "#b45309",
+          pointBackgroundColor: "#111827",
+          pointBorderColor: "#ffffff",
+          pointHoverBackgroundColor: "#ffffff",
+          pointHoverBorderColor: "#b45309"
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        r: {
+          min: 0,
+          max: 4,
+          ticks: { stepSize: 1, display: false },
+          pointLabels: {
+            color: "#374151",
+            font: { size: 12, weight: "700" }
+          },
+          grid: { color: "rgba(100, 116, 139, .24)" },
+          angleLines: { color: "rgba(100, 116, 139, .24)" }
+        }
+      }
+    }
+  });
+}
+
+document.querySelectorAll(".objective-card, .method-band, .prototype-shell, .flow-step, .hypothesis-card, .chart-card, .test-table-wrap, .evidence-board article, .quote, .meter-card, .iteration-card, .executive").forEach((element) => {
   element.classList.add("reveal");
 });
 
@@ -153,37 +241,11 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 
-function animateNumber(element) {
-  const raw = element.textContent.trim();
-  const value = Number.parseInt(raw, 10);
-  if (!Number.isFinite(value)) return;
-
-  const suffix = raw.replace(String(value), "");
-  const duration = 750;
-  const start = performance.now();
-
-  function tick(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    element.textContent = `${Math.round(value * eased)}${suffix}`;
-    if (progress < 1) requestAnimationFrame(tick);
-  }
-
-  requestAnimationFrame(tick);
-}
-
-const numberObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      animateNumber(entry.target);
-      numberObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.6 });
-
-statNumbers.forEach((number) => numberObserver.observe(number));
-
 const initialHash = window.location.hash.replace("#", "");
 if (initialHash && document.getElementById(initialHash)) {
   showSection(initialHash, false);
+} else {
+  document.querySelectorAll("#objetivo .reveal").forEach((element) => {
+    element.classList.add("is-visible");
+  });
 }
