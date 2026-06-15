@@ -126,6 +126,37 @@
           </article>
         </div>
 
+        <div class="visual-system">
+          <div class="visual-copy">
+            <span class="section-label">Sistema visual del prototipo</span>
+            <h3>Pasaporte, boarding pass y sello como piezas testeables</h3>
+            <p>
+              Igual que en la web principal del proyecto, el Sprint 2 incorpora materiales gráficos que ayudan a
+              comunicar la experiencia: identidad de era, progreso visible y cierre de logro.
+            </p>
+          </div>
+          <div class="artifact-stage" aria-label="Mockups de materiales del prototipo">
+            <article class="passport-mock">
+              <span>Viajeros del Tiempo</span>
+              <strong>Pasaporte del Explorador</strong>
+              <div class="passport-face"><i class="fa-solid fa-user-astronaut"></i></div>
+              <small>Nombre · Equipo · Era</small>
+            </article>
+            <article class="boarding-mock">
+              <span>Boarding Pass</span>
+              <strong>Edad Antigua</strong>
+              <div><b>Destino</b><i class="fa-solid fa-landmark"></i></div>
+              <small>Puerta 04 · Misión piloto</small>
+            </article>
+            <article class="stamp-mock">
+              <span>Bienvenido</span>
+              <strong>Archivo</strong>
+              <i class="fa-solid fa-stamp"></i>
+              <small>Sello de logro</small>
+            </article>
+          </div>
+        </div>
+
         <div class="method-band">
           <div>
             <span class="section-label">Técnica elegida</span>
@@ -154,6 +185,17 @@
             Recorre las cinco fases de la misión. Cada pantalla representa lo que el usuario ve, toca o decide durante
             la prueba piloto.
           </p>
+        </div>
+
+        <div class="era-strip" aria-label="Recorrido visual de eras históricas">
+          <span><i class="fa-solid fa-bone"></i><b>Dinosaurios</b><small>Fósiles</small></span>
+          <span><i class="fa-solid fa-fire"></i><b>Piedra</b><small>Pictogramas</small></span>
+          <span><i class="fa-solid fa-hammer"></i><b>Metales</b><small>Herramientas</small></span>
+          <span class="active"><i class="fa-solid fa-landmark"></i><b>Antigua</b><small>Misión piloto</small></span>
+          <span><i class="fa-solid fa-chess-rook"></i><b>Media</b><small>Cifrados</small></span>
+          <span><i class="fa-solid fa-compass-drafting"></i><b>Moderna</b><small>Inventos</small></span>
+          <span><i class="fa-solid fa-industry"></i><b>Contemp.</b><small>Máquinas</small></span>
+          <span><i class="fa-solid fa-microchip"></i><b>Digital</b><small>Programación</small></span>
         </div>
 
         <div class="prototype-shell">
@@ -186,6 +228,29 @@
           <article class="flow-step"><span>2</span><h3>Reto</h3><p>El grupo manipula piezas, compara símbolos y ordena una secuencia histórica con apoyos visuales.</p></article>
           <article class="flow-step"><span>3</span><h3>Ayuda</h3><p>Las pistas se ofrecen por niveles para sostener la autonomía sin resolver el reto por el alumnado.</p></article>
           <article class="flow-step"><span>4</span><h3>Cierre</h3><p>La validación abre un candado simbólico y termina con sello, verbalización y registro emocional.</p></article>
+        </div>
+
+        <div class="material-grid">
+          <article class="material-card">
+            <i class="fa-solid fa-file-lines"></i>
+            <h3>Carta de misión</h3>
+            <p>Lectura fácil, una consigna principal y apoyo visual para reducir carga cognitiva.</p>
+          </article>
+          <article class="material-card">
+            <i class="fa-solid fa-puzzle-piece"></i>
+            <h3>Piezas históricas</h3>
+            <p>Objetos grandes, manipulables y con redundancia de color, forma y símbolo.</p>
+          </article>
+          <article class="material-card">
+            <i class="fa-solid fa-key"></i>
+            <h3>Candado simbólico</h3>
+            <p>Validación clara del reto para cerrar la misión con feedback inmediato.</p>
+          </article>
+          <article class="material-card">
+            <i class="fa-solid fa-passport"></i>
+            <h3>Pasaporte</h3>
+            <p>Registro tangible del logro, útil para memoria emocional y evaluación formativa.</p>
+          </article>
         </div>
       </section>
 
@@ -222,6 +287,24 @@
             <h3>Logro y recuerdo</h3>
             <p><strong>Si</strong> el avance se valida con un sello en el pasaporte, <strong>entonces</strong> el alumnado percibirá el logro de forma tangible y recordará mejor su éxito.</p>
           </article>
+        </div>
+
+        <div class="hypothesis-matrix" aria-label="Matriz visual de hipótesis y evidencias">
+          <div class="matrix-head">Hipótesis</div>
+          <div class="matrix-head">Señal observable</div>
+          <div class="matrix-head">Decisión si falla</div>
+          <div><strong>H1</strong> Comprensión</div>
+          <div>Pregunta qué hacer menos de dos veces.</div>
+          <div>Simplificar instrucciones y separar narrativa de acción.</div>
+          <div><strong>H2</strong> Participación</div>
+          <div>Cada persona ejecuta una acción visible.</div>
+          <div>Rediseñar roles y repartir materiales.</div>
+          <div><strong>H3</strong> Reto</div>
+          <div>Usa pistas sin abandonar la misión.</div>
+          <div>Ajustar dificultad y granularidad de pistas.</div>
+          <div><strong>H4</strong> Logro</div>
+          <div>Explica qué consiguió al recibir el sello.</div>
+          <div>Reforzar cierre verbal y evidencia física.</div>
         </div>
 
         <div class="chart-grid">
@@ -287,6 +370,24 @@
             </ul>
           </article>
         </div>
+
+        <div class="test-visual-grid">
+          <article class="chart-card">
+            <h3>Distribución del test piloto</h3>
+            <div class="canvas-wrap"><canvas id="testMixChart"></canvas></div>
+          </article>
+          <article class="lock-panel">
+            <h3>Tipos de validación que se prototipan</h3>
+            <div class="lock-grid">
+              <span><i class="fa-solid fa-hashtag"></i> Código</span>
+              <span><i class="fa-solid fa-palette"></i> Color + símbolo</span>
+              <span><i class="fa-solid fa-arrow-up"></i> Direccional</span>
+              <span><i class="fa-solid fa-font"></i> Palabra clave</span>
+              <span><i class="fa-solid fa-magnet"></i> Pieza física</span>
+              <span><i class="fa-solid fa-mobile-screen"></i> Web simple</span>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section id="feedback" class="section" aria-labelledby="feedback-title">
@@ -321,6 +422,23 @@
           <article class="iteration-card"><span>2</span><h3>Reforzar roles</h3><p>Convertir cada rol en una acción física visible para evitar participación desigual dentro del grupo.</p></article>
           <article class="iteration-card"><span>3</span><h3>Ajustar pistas</h3><p>Graduar mejor la ayuda para que oriente sin resolver, especialmente cuando aparece bloqueo prolongado.</p></article>
           <article class="iteration-card"><span>4</span><h3>Escalar por eras</h3><p>Cuando la misión funcione con estabilidad, replicar el patrón en Prehistoria, Edad Antigua, Media, Moderna, Contemporánea, Digital y Futuro.</p></article>
+        </div>
+
+        <div class="results-dashboard">
+          <article class="chart-card">
+            <h3>Lectura visual del feedback</h3>
+            <div class="canvas-wrap"><canvas id="feedbackChart"></canvas></div>
+          </article>
+          <article class="benchmark-card">
+            <span class="section-label">Referencia del proyecto global</span>
+            <h3>Datos que inspiran la presentación visual</h3>
+            <div class="benchmark-grid">
+              <div><strong>8</strong><span>eras históricas</span></div>
+              <div><strong>23</strong><span>adaptaciones</span></div>
+              <div><strong>12</strong><span>participantes</span></div>
+              <div><strong>94%</strong><span>satisfacción</span></div>
+            </div>
+          </article>
         </div>
 
         <div class="executive">

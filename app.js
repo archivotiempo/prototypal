@@ -19,6 +19,8 @@ function showSection(id, updateHash = true) {
         element.classList.add("is-visible");
       });
       if (id === "hipotesis") createRadarChart();
+      if (id === "testeo") createTestMixChart();
+      if (id === "feedback") createFeedbackChart();
       activeSection.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }
@@ -182,6 +184,8 @@ if (tabs) {
 }
 
 let radarChart;
+let testMixChart;
+let feedbackChart;
 
 function createRadarChart() {
   const chartEl = document.getElementById("radarChart");
@@ -226,7 +230,75 @@ function createRadarChart() {
   });
 }
 
-document.querySelectorAll(".objective-card, .method-band, .prototype-shell, .flow-step, .hypothesis-card, .chart-card, .test-table-wrap, .evidence-board article, .quote, .meter-card, .iteration-card, .executive").forEach((element) => {
+function createTestMixChart() {
+  const chartEl = document.getElementById("testMixChart");
+  if (!chartEl || !window.Chart || testMixChart) return;
+
+  testMixChart = new Chart(chartEl, {
+    type: "doughnut",
+    data: {
+      labels: ["Experiencia", "Cierre", "Observación", "Ajustes"],
+      datasets: [
+        {
+          data: [20, 5, 10, 15],
+          backgroundColor: ["#b45309", "#2563eb", "#15803d", "#7c3aed"],
+          borderColor: "#ffffff",
+          borderWidth: 4
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: "62%",
+      plugins: {
+        legend: {
+          position: "bottom",
+          labels: { boxWidth: 12, color: "#374151", font: { weight: "700" } }
+        }
+      }
+    }
+  });
+}
+
+function createFeedbackChart() {
+  const chartEl = document.getElementById("feedbackChart");
+  if (!chartEl || !window.Chart || feedbackChart) return;
+
+  feedbackChart = new Chart(chartEl, {
+    type: "bar",
+    data: {
+      labels: ["Claridad", "Motivación", "Inclusión", "Escalabilidad"],
+      datasets: [
+        {
+          label: "Lectura inicial",
+          data: [82, 90, 88, 76],
+          backgroundColor: ["#b45309", "#2563eb", "#15803d", "#7c3aed"],
+          borderRadius: 10
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: {
+          min: 0,
+          max: 100,
+          ticks: { color: "#64748b", callback: (value) => `${value}%` },
+          grid: { color: "rgba(100, 116, 139, .18)" }
+        },
+        x: {
+          ticks: { color: "#374151", font: { weight: "700" } },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+}
+
+document.querySelectorAll(".objective-card, .visual-system, .method-band, .era-strip, .prototype-shell, .flow-step, .material-card, .hypothesis-card, .hypothesis-matrix, .chart-card, .test-table-wrap, .evidence-board article, .lock-panel, .quote, .meter-card, .iteration-card, .benchmark-card, .executive").forEach((element) => {
   element.classList.add("reveal");
 });
 
