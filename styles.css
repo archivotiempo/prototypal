@@ -919,6 +919,162 @@ h1 em {
   font-size: 44px;
 }
 
+.adapted-puzzle-board {
+  margin-top: 20px;
+  border: 1.5px solid #ead7b7;
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(180, 83, 9, .08), transparent 30%),
+    linear-gradient(160deg, #fffaf0, #ffffff);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, .05);
+  padding: 24px;
+}
+
+.puzzle-board-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .92fr);
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.puzzle-board-head h3 {
+  margin-top: 6px;
+  font-size: 28px;
+}
+
+.puzzle-tags {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.puzzle-tags span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  border: 1px solid #ead7b7;
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.puzzle-tags i {
+  color: var(--amber);
+  font-size: 16px;
+}
+
+.adapted-puzzles {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.adapted-puzzles article {
+  position: relative;
+  display: grid;
+  min-height: 202px;
+  align-content: start;
+  border: 1.5px solid #d8bd91;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .88);
+  padding: 16px;
+}
+
+.adapted-puzzles article > span {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 8px;
+  background: #a77838;
+  color: var(--white);
+  font-weight: 900;
+}
+
+.adapted-puzzles i {
+  display: grid;
+  width: 66px;
+  height: 66px;
+  place-items: center;
+  margin: 34px auto 12px;
+  border: 1px solid #ead7b7;
+  border-radius: 18px;
+  background: #fffaf0;
+  color: var(--ink);
+  font-size: 30px;
+}
+
+.adapted-puzzles h4 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.18;
+  text-transform: uppercase;
+}
+
+.adapted-puzzles p {
+  margin: 8px 0 0;
+  color: var(--body);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.adapted-puzzles small {
+  display: block;
+  margin-top: auto;
+  padding-top: 10px;
+  color: var(--amber-dark);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.dua-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+  border-top: 1px solid #ead7b7;
+  padding-top: 18px;
+}
+
+.dua-strip span {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dua-strip i {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--amber-soft);
+  color: var(--amber);
+  font-size: 18px;
+}
+
+.dua-strip b {
+  display: block;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
 .didactic-model {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 240px;
@@ -1004,117 +1160,157 @@ h1 em {
   text-align: center;
 }
 
-.visual-gallery {
+.integration-notes {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   margin-top: 22px;
 }
 
-.visual-gallery figure {
-  overflow: hidden;
-  margin: 0;
+.integration-notes article {
   border: 1.5px solid var(--border);
   border-radius: 18px;
-  background: var(--white);
+  background: linear-gradient(160deg, #ffffff, #f8fafc);
   box-shadow: 0 4px 14px rgba(15, 23, 42, .05);
+  padding: 22px;
 }
 
-.visual-gallery img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  object-position: top center;
-  border-bottom: 1px solid var(--border);
+.integration-notes i {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  background: var(--amber-soft);
+  color: var(--amber);
+  font-size: 20px;
 }
 
-.visual-gallery figcaption {
+.integration-notes h3 {
+  margin: 0;
   color: var(--ink);
-  padding: 14px 16px;
-  font-size: 13px;
-  font-weight: 900;
+}
+
+.integration-notes p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .visual-system {
   display: grid;
-  grid-template-columns: minmax(0, .92fr) minmax(420px, 1.08fr);
-  gap: 22px;
+  grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr);
+  gap: 30px;
   align-items: center;
   margin-top: 22px;
   border: 1.5px solid #fde68a;
-  border-radius: 22px;
+  border-radius: 28px;
   background:
-    linear-gradient(135deg, rgba(255, 251, 235, .92), rgba(255, 255, 255, .94)),
-    repeating-linear-gradient(90deg, transparent, transparent 30px, rgba(180, 83, 9, .05) 30px, rgba(180, 83, 9, .05) 31px);
-  box-shadow: 0 4px 14px rgba(15, 23, 42, .05);
-  padding: 26px;
+    radial-gradient(circle at 78% 18%, rgba(180, 83, 9, .08), transparent 28%),
+    linear-gradient(135deg, rgba(255, 251, 235, .92), rgba(255, 255, 255, .96));
+  box-shadow: 0 18px 42px rgba(15, 23, 42, .08);
+  overflow: hidden;
+  padding: clamp(28px, 3.2vw, 42px);
 }
 
 .visual-copy h3 {
   margin-top: 8px;
-  font-size: 26px;
+  max-width: 520px;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.1;
 }
 
 .visual-copy p {
-  margin-bottom: 0;
+  max-width: 650px;
   color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.visual-copy .visual-note {
+  margin-top: 18px;
+  border-left: 4px solid var(--amber);
+  padding-left: 18px;
+  font-size: 15px;
+}
+
+.visual-note strong {
+  color: var(--ink);
 }
 
 .artifact-stage {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+  justify-self: end;
+  width: min(100%, 620px);
+}
+
+.artifact-item {
+  display: grid;
   gap: 14px;
-  min-height: 300px;
+  justify-items: center;
+  min-width: 0;
+}
+
+.artifact-item--stamp {
+  grid-column: 1 / -1;
+  grid-template-columns: 150px minmax(0, 290px);
+  align-items: center;
+  justify-content: center;
+  justify-items: start;
+  margin-top: 2px;
 }
 
 .passport-mock,
-.boarding-mock,
-.stamp-mock {
+.boarding-mock {
   position: relative;
   overflow: hidden;
-  border: 2px solid var(--ink);
+  width: 100%;
+  max-width: 225px;
+  min-height: 286px;
+  border: 4px solid var(--ink);
+  border-radius: 20px;
   background: var(--white);
   color: var(--ink);
-  box-shadow: 0 14px 28px rgba(15, 23, 42, .12);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, .1);
 }
 
 .passport-mock {
-  min-height: 270px;
-  border-radius: 18px;
-  background:
-    radial-gradient(circle at 80% 18%, rgba(180, 83, 9, .18), transparent 24%),
-    linear-gradient(160deg, #ffffff, #fffbeb);
-  padding: 22px;
+  padding: 24px 22px;
 }
 
 .passport-mock::before {
   content: "";
   position: absolute;
-  inset: 16px;
-  border: 1.5px dashed rgba(17, 24, 39, .22);
-  border-radius: 14px;
+  inset: 18px;
+  border: 2px dashed rgba(17, 24, 39, .2);
+  border-radius: 16px;
 }
 
 .passport-mock span,
-.boarding-mock span,
+.boarding-mock .ticket-head span,
 .stamp-mock span {
+  position: relative;
+  z-index: 1;
   display: block;
   color: var(--amber);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   letter-spacing: .08em;
   text-transform: uppercase;
 }
 
 .passport-mock strong,
-.boarding-mock strong,
-.stamp-mock strong {
+.boarding-mock strong {
+  position: relative;
+  z-index: 1;
   display: block;
-  margin-top: 8px;
+  margin-top: 14px;
   font-family: Fraunces, Georgia, serif;
-  font-size: 28px;
+  font-size: clamp(25px, 2.1vw, 34px);
   line-height: 1;
 }
 
@@ -1122,72 +1318,158 @@ h1 em {
   position: relative;
   z-index: 1;
   display: grid;
-  width: 104px;
-  height: 104px;
+  width: 86px;
+  height: 86px;
   place-items: center;
   margin: 34px auto 22px;
-  border: 2px solid var(--ink);
+  border: 3px solid var(--ink);
   border-radius: 50%;
-  color: var(--amber);
-  font-size: 38px;
+  color: var(--ink);
+  font-size: 32px;
 }
 
-.passport-mock small,
-.boarding-mock small,
-.stamp-mock small {
+.passport-mock small {
   position: relative;
   z-index: 1;
-  color: var(--muted);
-  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  margin-top: 12px;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  color: var(--ink);
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .boarding-mock {
-  min-height: 132px;
-  border-radius: 16px;
-  background:
-    linear-gradient(90deg, transparent 0 68%, rgba(17, 24, 39, .08) 68% 70%, transparent 70%),
-    linear-gradient(135deg, #eff6ff, #ffffff);
-  padding: 18px;
+  max-width: 245px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, #ffffff 0 78%, #f8fafc 78% 100%);
+  padding: 0 24px 24px;
+}
+
+.ticket-head {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -24px 22px;
+  background: var(--ink);
+  color: var(--white);
+  padding: 15px 20px;
+}
+
+.boarding-mock .ticket-head span {
+  color: var(--white);
 }
 
 .boarding-mock::after {
   content: "";
   position: absolute;
-  top: -10px;
-  right: 27%;
-  bottom: -10px;
-  border-left: 2px dashed rgba(17, 24, 39, .22);
+  top: 0;
+  right: 22%;
+  bottom: 0;
+  border-left: 3px dashed rgba(17, 24, 39, .18);
 }
 
-.boarding-mock div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 18px 0 8px;
-  color: var(--blue);
-  font-size: 24px;
+.boarding-mock > i {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 68px;
+  height: 68px;
+  place-items: center;
+  margin: 26px auto;
+  color: var(--ink);
+  font-size: 38px;
 }
 
 .boarding-mock b {
-  color: var(--ink);
-  font-size: 12px;
+  position: relative;
+  z-index: 1;
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
   letter-spacing: .08em;
   text-transform: uppercase;
 }
 
+.boarding-mock small {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-top: 10px;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .stamp-mock {
+  position: relative;
   display: grid;
-  min-height: 132px;
+  width: 140px;
+  height: 140px;
   place-items: center;
+  overflow: hidden;
+  border: 4px solid var(--ink);
   border-radius: 50%;
-  background: radial-gradient(circle, #fff 0 45%, #fef3c7 46% 100%);
+  background: var(--white);
+  box-shadow: 0 18px 34px rgba(15, 23, 42, .1);
   text-align: center;
-  transform: rotate(-6deg);
+}
+
+.stamp-mock::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 3px dashed var(--ink);
+  border-radius: 50%;
+}
+
+.stamp-mock span,
+.stamp-mock strong,
+.stamp-mock i {
+  position: relative;
+  z-index: 1;
+}
+
+.stamp-mock strong {
+  color: var(--ink);
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
 }
 
 .stamp-mock i {
-  color: var(--amber);
+  color: var(--ink);
   font-size: 28px;
+}
+
+.artifact-caption {
+  max-width: 260px;
+  text-align: center;
+}
+
+.artifact-caption h4 {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: var(--amber);
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.artifact-caption p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .prototype-shell {
@@ -1853,8 +2135,11 @@ h1 em {
   .poster-hero,
   .poster-principles,
   .challenge-board,
+  .puzzle-board-head,
+  .adapted-puzzles,
+  .dua-strip,
   .didactic-model,
-  .visual-gallery,
+  .integration-notes,
   .method-band,
   .prototype-shell,
   .screen-grid {
@@ -1863,6 +2148,19 @@ h1 em {
 
   .hero__content,
   .prototype-screen { min-height: auto; }
+
+  .adapted-puzzles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .puzzle-tags,
+  .dua-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .artifact-stage {
+    justify-self: center;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1877,7 +2175,6 @@ h1 em {
   .section-heading,
   .rubric-grid,
   .evidence-board,
-  .artifact-stage,
   .lock-grid,
   .benchmark-grid,
   .model-grid {
@@ -1923,12 +2220,22 @@ h1 em {
     display: none;
   }
   .stamp-mock {
-    width: 170px;
-    min-height: 170px;
+    width: 138px;
+    height: 138px;
     margin: auto;
+  }
+  .artifact-stage {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .artifact-item--stamp {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
   .poster-hero,
   .flow-map-board,
+  .adapted-puzzle-board,
   .didactic-model {
     padding: 20px;
   }
@@ -1948,6 +2255,11 @@ h1 em {
   .flow-map article {
     width: 100%;
     min-height: 118px;
+  }
+  .adapted-puzzles,
+  .puzzle-tags,
+  .dua-strip {
+    grid-template-columns: 1fr;
   }
 }
 

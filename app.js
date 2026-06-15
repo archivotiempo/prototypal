@@ -298,7 +298,7 @@ function createFeedbackChart() {
   });
 }
 
-document.querySelectorAll(".objective-card, .visual-system, .poster-hero, .flow-map-board, .challenge-card, .didactic-model, .visual-gallery figure, .method-band, .era-strip, .prototype-shell, .flow-step, .material-card, .hypothesis-card, .hypothesis-matrix, .chart-card, .test-table-wrap, .evidence-board article, .lock-panel, .quote, .meter-card, .iteration-card, .benchmark-card, .executive").forEach((element) => {
+document.querySelectorAll(".objective-card, .visual-system, .poster-hero, .flow-map-board, .challenge-card, .adapted-puzzle-board, .adapted-puzzles article, .didactic-model, .integration-notes article, .method-band, .era-strip, .prototype-shell, .flow-step, .material-card, .hypothesis-card, .hypothesis-matrix, .chart-card, .test-table-wrap, .evidence-board article, .lock-panel, .quote, .meter-card, .iteration-card, .benchmark-card, .executive").forEach((element) => {
   element.classList.add("reveal");
 });
 
