@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Value Proposition Canvas | El Archivo de la Historia</title>
+  <meta name="description" content="Value Proposition Canvas interactivo para El Archivo de la Historia y La Maleta del Tiempo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+  <div class="time-orbit" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="page-shell">
+    <header class="hero" id="inicio">
+      <div class="hero__content">
+        <p class="kicker"><span></span> Value Proposition Canvas</p>
+        <h1>El Archivo de la Historia: <em>encaje de valor</em></h1>
+        <div class="hero-kpis" aria-label="Datos clave del canvas">
+          <span><strong>8</strong> eras</span>
+          <span><strong id="adaptationCount">23</strong> insights</span>
+          <span><strong>94</strong>% satisfacción</span>
+        </div>
+        <p class="hero__lead">
+          Canvas interactivo para conectar necesidades reales del alumnado con una experiencia de escape room
+          educativo inclusivo, multisensorial y basada en retos STEAM.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#canvas" data-go="canvas"><i class="fa-solid fa-diagram-project"></i> Ver canvas</a>
+        </div>
+      </div>
+
+      <aside class="summary-panel" aria-label="Resumen del proyecto">
+        <div class="time-card">
+          <div class="time-card__ring">
+            <i class="fa-solid fa-suitcase-rolling"></i>
+          </div>
+          <div>
+            <span>La Maleta del Tiempo</span>
+            <strong>Hipótesis de encaje</strong>
+          </div>
+        </div>
+        <h2>Hipótesis de encaje</h2>
+        <p>
+          Si la experiencia ofrece retos STEAM multisensoriales, apoyos graduados,
+          narrativa histórica y progreso visible, el alumnado podrá comprender,
+          colaborar, decidir y sentirse competente sin que la accesibilidad reduzca el desafío.
+        </p>
+        <div class="metric-grid">
+          <div class="metric"><strong>8</strong><span><i class="fa-solid fa-clock-rotate-left"></i> Eras históricas</span></div>
+          <div class="metric"><strong>23</strong><span><i class="fa-solid fa-universal-access"></i> Adaptaciones</span></div>
+          <div class="metric"><strong>DUA</strong><span><i class="fa-solid fa-layer-group"></i> Acceso múltiple</span></div>
+          <div class="metric"><strong>STEAM</strong><span><i class="fa-solid fa-flask-vial"></i> Retos activos</span></div>
+        </div>
+      </aside>
+    </header>
+
+    <section class="stats-bar" aria-label="Resumen ejecutivo">
+      <div class="stat"><strong>20</strong><span>elementos de valor priorizados</span></div>
+      <div class="stat"><strong>6</strong><span>bloques del Value Proposition Canvas</span></div>
+      <div class="stat"><strong>4</strong><span>pasos para validar el MVP</span></div>
+      <div class="stat"><strong>1</strong><span>microexperiencia inicial recomendada</span></div>
+    </section>
+
+    <nav class="nav" aria-label="Navegación principal">
+      <button class="active" type="button" data-section="canvas">
+        <i class="fa-solid fa-table-cells-large"></i>
+        <span><strong>Canvas</strong><small>20 elementos · 6 bloques</small></span>
+      </button>
+      <button type="button" data-section="prioridad">
+        <i class="fa-solid fa-arrow-up-wide-short"></i>
+        <span><strong>Prioridad</strong><small>Jobs · pains · gains</small></span>
+      </button>
+      <button type="button" data-section="prototipo">
+        <i class="fa-solid fa-suitcase"></i>
+        <span><strong>MVP</strong><small>4 pasos · 15-20 min</small></span>
+      </button>
+      <button type="button" data-section="insights">
+        <i class="fa-solid fa-lightbulb"></i>
+        <span><strong>Insights</strong><small>4 decisiones clave</small></span>
+      </button>
+    </nav>
+
+    <main>
+      <section id="canvas" class="section active" aria-labelledby="canvas-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">Mapa completo</span>
+            <h2 id="canvas-title">Canvas visual</h2>
+          </div>
+          <p>Haz clic en cada nota para abrir una explicación ampliada. Usa los filtros para centrarte en un bloque concreto.</p>
+        </div>
+
+        <div class="filters" aria-label="Filtros del canvas">
+          <button class="chip active" type="button" data-filter="all">Todo</button>
+          <button class="chip" type="button" data-filter="jobs">Trabajos</button>
+          <button class="chip" type="button" data-filter="pains">Frustraciones</button>
+          <button class="chip" type="button" data-filter="gains">Alegrías</button>
+          <button class="chip" type="button" data-filter="products">Productos / servicios</button>
+          <button class="chip" type="button" data-filter="relievers">Aliviadores</button>
+          <button class="chip" type="button" data-filter="creators">Creadores</button>
+        </div>
+
+        <div class="timeline-strip" aria-label="Recorrido de eras">
+          <span><i class="fa-solid fa-bone"></i> Dinosaurios</span>
+          <span><i class="fa-solid fa-fire"></i> Piedra</span>
+          <span><i class="fa-solid fa-hammer"></i> Metales</span>
+          <span><i class="fa-solid fa-landmark"></i> Antigua</span>
+          <span><i class="fa-solid fa-chess-rook"></i> Media</span>
+          <span><i class="fa-solid fa-flask"></i> Moderna</span>
+          <span><i class="fa-solid fa-industry"></i> Contemp.</span>
+          <span><i class="fa-solid fa-microchip"></i> Digital</span>
+        </div>
+
+        <div class="canvas-board">
+          <article class="canvas-panel value-map">
+            <header class="panel-header">
+              <span>Mapa de valor</span>
+              <h3>Qué ofrece el proyecto</h3>
+            </header>
+
+            <div class="canvas-grid">
+              <div class="canvas-block" data-mark="01">
+                <h4>Productos y servicios</h4>
+                <div class="postits">
+                  <button class="postit postit--gold" type="button" data-type="products" data-title="Escape room híbrido" data-detail="Una experiencia gamificada que combina maleta física, recursos web, candados digitales, materiales manipulativos y narrativa de viaje temporal." data-priority="Esencial" data-bullets="Maleta del tiempo con compartimentos|Retos por eras históricas|Validaciones físicas y digitales"><strong>Escape room híbrido</strong><small>Físico + digital + experiencia</small></button>
+                  <button class="postit postit--gold" type="button" data-type="products" data-title="Retos STEAM multinivel" data-detail="Pruebas de ciencia, tecnología, ingeniería, arte y matemáticas diseñadas con distintos niveles de apoyo para evitar que la dificultad excluya." data-priority="Esencial" data-bullets="Razonamiento concreto|Manipulación de piezas|Códigos, mapas, secuencias y patrones"><strong>Retos STEAM multinivel</strong><small>Dificultad ajustada</small></button>
+                  <button class="postit postit--gold" type="button" data-type="products" data-title="Pasaporte del Explorador" data-detail="Sistema de progreso visible que convierte cada avance en una evidencia tangible de logro, autonomía y participación." data-priority="Alta" data-bullets="Sellos por era|Registro de logros|Cierre emocional positivo"><strong>Pasaporte del Explorador</strong><small>Progreso visible</small></button>
+                </div>
+              </div>
+
+              <div class="canvas-block" data-mark="02">
+                <h4>Aliviadores de frustraciones</h4>
+                <div class="postits">
+                  <button class="postit postit--red" type="button" data-type="relievers" data-title="Pistas progresivas" data-detail="Sistema de ayuda por niveles: orientar, reducir opciones, mostrar ejemplo y guiar paso a paso sin dar la respuesta directamente desde el inicio." data-priority="Esencial" data-bullets="Evita bloqueos|Mantiene autonomía|Reduce frustración ante el error"><strong>Pistas progresivas</strong><small>Ayuda sin sustituir</small></button>
+                  <button class="postit postit--red" type="button" data-type="relievers" data-title="Instrucciones secuenciadas" data-detail="Las consignas se dividen en acciones cortas, visuales y verificables para reducir la carga cognitiva y mejorar la comprensión." data-priority="Esencial" data-bullets="Paso 1, paso 2, paso 3|Apoyo pictográfico|Demostración antes del reto"><strong>Instrucciones secuenciadas</strong><small>Menos sobrecarga</small></button>
+                  <button class="postit postit--red" type="button" data-type="relievers" data-title="Diseño multisensorial" data-detail="Cada reto puede comprenderse a través de varios canales: imagen, objeto, color con símbolo, textura, audio, gesto o ejemplo físico." data-priority="Alta" data-bullets="Alternativas al color|Texturas y contraste|Materiales accesibles"><strong>Diseño multisensorial</strong><small>Múltiples entradas</small></button>
+                </div>
+              </div>
+
+              <div class="canvas-block canvas-block--wide" data-mark="03">
+                <h4>Creadores de alegrías</h4>
+                <div class="postits">
+                  <button class="postit postit--green" type="button" data-type="creators" data-title="Roles dignificantes" data-detail="Cada alumno tiene una responsabilidad concreta y reconocible: observador, constructor, comunicador, guardián de pistas, cronista o verificador." data-priority="Esencial" data-bullets="Protagonismo distribuido|Participación visible|Fortalezas individuales"><strong>Roles dignificantes</strong><small>Cada persona aporta</small></button>
+                  <button class="postit postit--green" type="button" data-type="creators" data-title="Logros visibles" data-detail="El avance se hace tangible mediante sellos, insignias, mensajes de logro y certificación final, reforzando autoestima y memoria del éxito." data-priority="Alta" data-bullets="Refuerzo positivo|Autoeficacia|Celebración de micro-logros"><strong>Logros visibles</strong><small>Orgullo y memoria de éxito</small></button>
+                  <button class="postit postit--green" type="button" data-type="creators" data-title="Elección real" data-detail="Pequeñas decisiones dentro del juego aumentan autonomía: elegir pista, herramienta, orden de microtarea o forma de registrar el avance." data-priority="Alta" data-bullets="Autonomía graduada|Motivación intrínseca|Mayor implicación emocional"><strong>Elección real</strong><small>Decidir dentro del reto</small></button>
+                  <button class="postit postit--green" type="button" data-type="creators" data-title="Narrativa histórica" data-detail="El viaje por eras históricas actúa como andamiaje cognitivo, emocional y visual para ordenar la experiencia y recordar aprendizajes." data-priority="Alta" data-bullets="Contexto con sentido|Secuencia temporal|Misión compartida"><strong>Narrativa histórica</strong><small>Aprender con misión</small></button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="canvas-panel profile-map">
+            <header class="panel-header">
+              <span>Perfil del usuario</span>
+              <h3>Qué necesita el alumnado</h3>
+            </header>
+
+            <div class="canvas-grid">
+              <div class="canvas-block" data-mark="04">
+                <h4>Trabajo(s) del cliente</h4>
+                <div class="postits">
+                  <button class="postit postit--blue" type="button" data-type="jobs" data-title="Comprender la misión" data-detail="El primer trabajo del usuario es entender qué ocurre, qué tiene que hacer, con quién participa y cómo sabe que ha avanzado." data-priority="Muy importante" data-bullets="Orientación inicial|Comprensión de normas|Secuencia clara de acción"><strong>Comprender la misión</strong><small>Qué hago y para qué</small></button>
+                  <button class="postit postit--blue" type="button" data-type="jobs" data-title="Resolver de forma concreta" data-detail="El alumnado necesita transformar conceptos abstractos en acciones manipulativas: tocar, ordenar, comparar, clasificar, construir y comprobar." data-priority="Muy importante" data-bullets="Aprendizaje práctico|Razonamiento concreto|Acción observable"><strong>Resolver de forma concreta</strong><small>Tocar, probar, comprobar</small></button>
+                  <button class="postit postit--blue" type="button" data-type="jobs" data-title="Colaborar con el grupo" data-detail="Participar implica esperar turnos, compartir materiales, escuchar, pedir ayuda y aportar desde una fortaleza concreta." data-priority="Alta" data-bullets="Turnos y comunicación|Interdependencia positiva|Ayuda entre iguales"><strong>Colaborar con el grupo</strong><small>Ser parte activa</small></button>
+                </div>
+              </div>
+
+              <div class="canvas-block" data-mark="05">
+                <h4>Frustraciones</h4>
+                <div class="postits">
+                  <button class="postit postit--red" type="button" data-type="pains" data-title="Sobrecarga cognitiva" data-detail="Demasiadas instrucciones, pasos simultáneos o información abstracta pueden bloquear al usuario antes de iniciar el reto." data-priority="Extrema" data-bullets="Memoria de trabajo limitada|Dificultad con secuencias largas|Necesidad de estructura predecible"><strong>Sobrecarga cognitiva</strong><small>Demasiado a la vez</small></button>
+                  <button class="postit postit--red" type="button" data-type="pains" data-title="Quedar fuera del grupo" data-detail="Si la prueba favorece solo lectura rápida o abstracción, algunos alumnos quedan como espectadores aunque la actividad sea grupal." data-priority="Extrema" data-bullets="Participación desigual|Pérdida de autoestima|Dependencia de otros"><strong>Quedar fuera del grupo</strong><small>Estar, pero no participar</small></button>
+                  <button class="postit postit--red" type="button" data-type="pains" data-title="Frustración ante el error" data-detail="El error puede vivirse como fracaso si no hay pistas graduadas, validación inmediata y lenguaje de crecimiento." data-priority="Alta" data-bullets="Ansiedad|Bloqueo|Abandono del reto"><strong>Frustración ante el error</strong><small>Bloqueo y ansiedad</small></button>
+                </div>
+              </div>
+
+              <div class="canvas-block canvas-block--wide" data-mark="06">
+                <h4>Alegrías</h4>
+                <div class="postits">
+                  <button class="postit postit--green" type="button" data-type="gains" data-title="Sentirse capaz" data-detail="La alegría más transformadora es experimentar competencia real: entender, decidir, aportar y avanzar con apoyos dignos." data-priority="Esencial" data-bullets="Autoeficacia|Orgullo personal|Motivación para repetir"><strong>Sentirse capaz</strong><small>“Puedo hacerlo”</small></button>
+                  <button class="postit postit--green" type="button" data-type="gains" data-title="Ser protagonista" data-detail="El alumnado desea tener un papel visible dentro del grupo, no solo recibir ayuda o mirar cómo otros resuelven." data-priority="Esencial" data-bullets="Liderazgo emergente|Reconocimiento social|Identidad positiva"><strong>Ser protagonista</strong><small>Un papel valioso</small></button>
+                  <button class="postit postit--green" type="button" data-type="gains" data-title="Aprender jugando" data-detail="La experiencia de misión, misterio, objetos y progreso convierte el aprendizaje en una acción significativa y memorable." data-priority="Alta" data-bullets="Atención sostenida|Curiosidad|Recuerdo emocional"><strong>Aprender jugando</strong><small>Reto con sentido</small></button>
+                  <button class="postit postit--green" type="button" data-type="gains" data-title="Participación segura" data-detail="La seguridad emocional permite explorar, equivocarse, pedir ayuda y volver a intentarlo sin miedo a ser juzgado." data-priority="Alta" data-bullets="Confianza|Clima de respeto|Regulación emocional"><strong>Participación segura</strong><small>Reto sin amenaza</small></button>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="fit-strip">
+          <div>
+            <h3>Pain clave</h3>
+            <p>El alumnado puede quedar fuera de una experiencia motivadora si no está diseñada para su forma de comprender, comunicarse, moverse o regularse.</p>
+          </div>
+          <div class="fit-strip__bridge" aria-hidden="true">Encaje</div>
+          <div>
+            <h3>Gain clave</h3>
+            <p>Participación real, digna y protagonista: no solo estar presente, sino aportar, decidir, avanzar y sentirse capaz.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="prioridad" class="section" aria-labelledby="prioridad-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">Decisión de alcance</span>
+            <h2 id="prioridad-title">Priorización</h2>
+          </div>
+          <p>Ordena qué debe entrar en el primer prototipo y qué puede quedar para iteraciones posteriores.</p>
+        </div>
+
+        <div class="priority-grid">
+          <article class="priority-card">
+            <h3>Importancia de trabajos</h3>
+            <p>Lo más importante es que el alumnado entienda, actúe y colabore.</p>
+            <div class="axis">
+              <span class="axis__top">Muy importante</span><span class="axis__bottom">Menos prioritario</span>
+              <div class="priority-item p1"><strong>Comprender la misión</strong><span>Sin orientación no hay experiencia posible.</span></div>
+              <div class="priority-item p2"><strong>Resolver de forma concreta</strong><span>La acción manipulativa abre el acceso al contenido.</span></div>
+              <div class="priority-item p3"><strong>Colaborar con el grupo</strong><span>Necesita roles claros para evitar participación desigual.</span></div>
+              <div class="priority-item p4"><strong>Autorregularse</strong><span>Debe estar presente en el diseño, aunque se mida después.</span></div>
+            </div>
+          </article>
+
+          <article class="priority-card">
+            <h3>Gravedad de frustraciones</h3>
+            <p>La mayor amenaza es que el reto excluya por diseño.</p>
+            <div class="axis axis--red">
+              <span class="axis__top">Extrema</span><span class="axis__bottom">Moderada</span>
+              <div class="priority-item p1"><strong>Quedar fuera del grupo</strong><span>Dolor emocional y social más crítico.</span></div>
+              <div class="priority-item p2"><strong>Sobrecarga cognitiva</strong><span>Bloquea la entrada a la actividad.</span></div>
+              <div class="priority-item p3"><strong>Frustración ante el error</strong><span>Puede provocar abandono o dependencia.</span></div>
+              <div class="priority-item p4"><strong>Estímulos no adaptados</strong><span>Relevante para perfiles sensoriales y atencionales.</span></div>
+            </div>
+          </article>
+
+          <article class="priority-card">
+            <h3>Relevancia de alegrías</h3>
+            <p>El prototipo debe demostrar que accesibilidad y reto pueden convivir.</p>
+            <div class="axis axis--green">
+              <span class="axis__top">Esencial</span><span class="axis__bottom">Deseable</span>
+              <div class="priority-item p1"><strong>Sentirse capaz</strong><span>Corazón emocional de la propuesta.</span></div>
+              <div class="priority-item p2"><strong>Ser protagonista</strong><span>Convierte la inclusión en participación visible.</span></div>
+              <div class="priority-item p3"><strong>Aprender jugando</strong><span>Activa motivación y recuerdo.</span></div>
+              <div class="priority-item p4"><strong>Elegir y decidir</strong><span>Potencia autonomía, pero puede crecer por iteraciones.</span></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="result-bars-wrap">
+          <h3>Encaje previsto en el primer prototipo</h3>
+          <div class="result-bar-row"><span>Comprensión</span><div><b style="width:88%"></b></div><strong>88%</strong></div>
+          <div class="result-bar-row"><span>Participación</span><div><b style="width:92%"></b></div><strong>92%</strong></div>
+          <div class="result-bar-row"><span>Autonomía guiada</span><div><b style="width:78%"></b></div><strong>78%</strong></div>
+          <div class="result-bar-row"><span>Barrera reducida</span><div><b style="width:84%"></b></div><strong>84%</strong></div>
+        </div>
+      </section>
+
+      <section id="prototipo" class="section" aria-labelledby="prototipo-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">Primer experimento</span>
+            <h2 id="prototipo-title">Prototipo MVP</h2>
+          </div>
+          <p>Primer prototipo recomendado para validar el encaje problema-solución con usuarios reales.</p>
+        </div>
+
+        <div class="prototype-flow">
+          <article class="flow-step"><span>1</span><h3>Microexperiencia</h3><p>Una única era histórica completa con narrativa breve, reto manipulativo, apoyo visual, pista progresiva y validación final.</p></article>
+          <article class="flow-step"><span>2</span><h3>Participación guiada</h3><p>Roles sencillos para que cada alumno tenga una acción útil: observar, colocar, comprobar, comunicar o sellar.</p></article>
+          <article class="flow-step"><span>3</span><h3>Medición rápida</h3><p>Registrar comprensión de instrucciones, participación, necesidad de pistas, frustración, colaboración y satisfacción final.</p></article>
+          <article class="flow-step"><span>4</span><h3>Aprendizaje validado</h3><p>Iterar dificultad, apoyos y tiempos según lo observado antes de ampliar a más eras o añadir tecnología avanzada.</p></article>
+        </div>
+
+        <div class="executive">
+          <h2>MVP recomendado</h2>
+          <p>Un reto de 15-20 minutos de la Maleta del Tiempo, perteneciente a una sola era, con materiales físicos, instrucciones visuales, tres niveles de pista, rol para cada participante, validación inmediata y pasaporte de logro. El objetivo no es probar toda la plataforma ni todo el escape room, sino comprobar si el alumnado comprende la misión, participa de forma activa, tolera el reto y experimenta sensación de logro.</p>
+        </div>
+      </section>
+
+      <section id="insights" class="section" aria-labelledby="insights-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">Criterios de diseño</span>
+            <h2 id="insights-title">Insights estratégicos</h2>
+          </div>
+          <p>Ideas fuerza para tomar decisiones de diseño antes del prototipado.</p>
+        </div>
+
+        <div class="insight-grid">
+          <article class="insight-card"><h3>1. La accesibilidad no debe aparecer al final</h3><p>El valor diferencial está en diseñar para la diversidad desde el origen. Cuando la ayuda forma parte del material, el alumno no siente que recibe una excepción, sino que el juego está pensado para que pueda participar.</p></article>
+          <article class="insight-card"><h3>2. El reto debe ser alcanzable, no fácil</h3><p>La inclusión no consiste en rebajar el desafío, sino en construir varios caminos hacia el logro. Un buen prototipo debe mantener misterio, esfuerzo y descubrimiento, pero eliminar barreras innecesarias.</p></article>
+          <article class="insight-card"><h3>3. El progreso visible es memoria emocional</h3><p>El pasaporte, los sellos y las insignias no son decoración: convierten el avance en evidencia tangible y ayudan al alumnado a recordar que pudo superar el reto.</p></article>
+          <article class="insight-card"><h3>4. La colaboración necesita diseño</h3><p>No basta con poner al alumnado en grupo. La participación equitativa exige roles, microtareas complementarias y momentos donde distintas fortalezas puedan liderar.</p></article>
+        </div>
+
+        <div class="executive">
+          <h2>Valoración ejecutiva</h2>
+          <p>El Archivo de la Historia convierte la inclusión en una experiencia tangible: no adapta al final, sino que diseña desde el inicio para que todos puedan participar. Su valor estratégico reside en unir narrativa, manipulación, apoyos visuales, tecnología accesible y retos STEAM multinivel para transformar barreras en oportunidades de aprendizaje. El proyecto no se limita a enseñar contenidos históricos o científicos; crea situaciones donde el alumnado con discapacidad intelectual o necesidades educativas especiales puede comprender, decidir, colaborar y liderar. La idea fuerza es clara: la accesibilidad no reduce el reto, sino que permite que el reto sea verdaderamente compartido.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="drawer" id="drawer" aria-live="polite" aria-label="Detalle del elemento seleccionado" aria-hidden="true">
+    <button class="drawer__close" id="drawerClose" type="button" aria-label="Cerrar">×</button>
+    <span class="drawer__category" id="drawerCategory">Categoría</span>
+    <h2 id="drawerTitle">Título</h2>
+    <p id="drawerDetail">Detalle</p>
+    <ul id="drawerBullets"></ul>
+    <span class="drawer__badge" id="drawerPriority">Prioridad</span>
+  </aside>
+
+  <script src="app.js?v=6"></script>
+</body>
+</html>
