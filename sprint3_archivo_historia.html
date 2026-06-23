@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sprint 3 · Testeo y aprendizaje validado | El Archivo de la Historia</title>
+  <style>
+    :root{
+      --ink:#263238; --muted:#6a5f55; --paper:#fffdf8; --paper2:#fff8ec; --line:#eadfcf;
+      --brown:#6f4e37; --brown2:#9a6a43; --gold:#c99a3d; --green:#607d3b; --red:#a84f3d;
+      --blue:#3d6f8f; --violet:#725a7a; --shadow:0 24px 70px rgba(69,45,27,.14);
+      --radius:22px;
+    }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#f6efe5 0%,#fffdf8 42%,#f8f0e5 100%);color:var(--ink);line-height:1.55}
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
+    .hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:radial-gradient(circle at 20% 10%,rgba(201,154,61,.22),transparent 35%),linear-gradient(135deg,#fff8ec,#ffffff 60%,#f7efe4);box-shadow:var(--shadow);padding:34px}
+    .hero:after{content:"";position:absolute;right:-80px;top:-90px;width:290px;height:290px;border:1px solid rgba(111,78,55,.16);border-radius:50%;box-shadow:inset 0 0 0 24px rgba(201,154,61,.06),inset 0 0 0 52px rgba(111,78,55,.04)}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:var(--brown);color:white;border-radius:999px;padding:8px 13px;font-size:13px;font-weight:700;letter-spacing:.25px}
+    .hero h1{font-size:clamp(32px,5.2vw,60px);line-height:1;margin:18px 0 14px;color:#3d2a1b;letter-spacing:-1.5px;max-width:850px}
+    .hero p{max-width:850px;font-size:18px;margin:0;color:#4c4035}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;margin-top:28px;position:relative;z-index:1}
+    .panel{background:rgba(255,255,255,.76);border:1px solid var(--line);border-radius:var(--radius);padding:20px;backdrop-filter:blur(8px)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+    .stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px}.stat b{display:block;font-size:26px;color:var(--brown)}.stat span{font-size:12px;text-transform:uppercase;color:var(--muted);font-weight:700;letter-spacing:.6px}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,253,248,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(10px);margin-top:20px}
+    nav .wrap{display:flex;gap:8px;overflow:auto;padding-top:10px;padding-bottom:10px}nav a{white-space:nowrap;text-decoration:none;color:var(--brown);border:1px solid var(--line);padding:8px 12px;border-radius:999px;background:#fff;font-size:14px;font-weight:700}nav a:hover,nav a.active{background:var(--brown);color:#fff}
+    section{margin:28px 0}.section-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 16px 42px rgba(69,45,27,.08);padding:26px}h2{font-size:30px;line-height:1.1;margin:0 0 12px;color:#3d2a1b}h3{margin:0 0 10px;color:#4a3020}.kicker{font-size:13px;text-transform:uppercase;color:var(--brown2);font-weight:800;letter-spacing:.9px;margin:0 0 8px}.lead{font-size:17px;color:#51463b;margin-top:0}.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.mini{border:1px solid var(--line);border-radius:18px;background:var(--paper);padding:16px}.mini strong{color:var(--brown)}
+    .timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:18px}.step{position:relative;padding:16px;border-radius:18px;background:linear-gradient(180deg,#fff,#fff8ed);border:1px solid var(--line)}.step .num{display:inline-grid;place-items:center;width:34px;height:34px;background:var(--brown);color:#fff;border-radius:50%;font-weight:800;margin-bottom:8px}.step b{display:block;color:#3d2a1b}.step small{color:var(--muted)}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#fff}th,td{padding:12px 13px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);font-size:14px}th{background:#f3e8d8;color:#3d2a1b;font-size:13px;text-transform:uppercase;letter-spacing:.4px}tr:last-child td{border-bottom:0}.tag{display:inline-block;border-radius:999px;padding:4px 8px;background:#f3e8d8;color:#5a3d29;font-weight:700;font-size:12px}.scale{display:flex;gap:4px;margin-top:6px}.dot{width:18px;height:18px;border-radius:50%;background:#e9dac7}.dot.on{background:var(--gold)}
+    .matrix{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}.cell{min-height:190px;padding:18px;border-bottom:1px solid var(--line)}.cell:nth-child(odd){border-right:1px solid var(--line)}.cell:nth-child(3),.cell:nth-child(4){border-bottom:0}.cell h3{display:flex;align-items:center;gap:10px}.cell ul{margin:8px 0 0 18px;padding:0}.cell li{margin:8px 0}.ok{color:var(--green)}.improve{color:var(--red)}.question{color:var(--blue)}.idea{color:var(--violet)}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.tab{border:1px solid var(--line);background:#fff;color:var(--brown);border-radius:999px;padding:9px 13px;font-weight:800;cursor:pointer}.tab.active{background:var(--brown);color:#fff}.tab-panel{display:none}.tab-panel.active{display:block}.survey-card{border:1px solid var(--line);border-radius:18px;padding:18px;background:var(--paper2);margin:10px 0}.survey-card label{font-weight:800;color:#3d2a1b}.survey-card input[type=range]{width:100%;accent-color:var(--brown)}.survey-card textarea,.survey-card select{width:100%;border:1px solid var(--line);border-radius:12px;padding:10px;font:inherit;background:#fff;margin-top:8px}.meter{height:14px;background:#eadfcf;border-radius:999px;overflow:hidden}.meter span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--gold),var(--green));transition:.4s}.decision{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}.decision article{padding:16px;border-radius:18px;border:1px solid var(--line);background:#fff}.decision article:nth-child(2){box-shadow:inset 0 0 0 2px rgba(96,125,59,.25);background:#fbfff2}
+    .quote{border-left:5px solid var(--gold);padding:10px 16px;background:#fffaf1;border-radius:0 14px 14px 0;color:#4a4035}.footer{margin:34px 0 10px;text-align:center;color:var(--muted);font-size:13px}.print{position:fixed;right:18px;bottom:18px;border:0;border-radius:999px;background:var(--brown);color:#fff;padding:12px 16px;font-weight:800;box-shadow:var(--shadow);cursor:pointer}
+    @media(max-width:850px){.hero-grid,.grid-2,.grid-3,.grid-4,.timeline,.decision{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.matrix{grid-template-columns:1fr}.cell,.cell:nth-child(odd){border-right:0}.cell:nth-child(3){border-bottom:1px solid var(--line)}}
+    @media print{nav,.print{display:none}.wrap{max-width:100%;padding:10px}.section-card,.hero{box-shadow:none;break-inside:avoid}body{background:white}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <span class="badge">Sprint 3 · Testeo del prototipo</span>
+      <h1>El Archivo de la Historia: del prototipo al aprendizaje validado</h1>
+      <p>Entrega visual e interactiva para preparar, recoger y procesar feedback de usuarios/jugadores tras probar la microexperiencia de escape room educativo inclusivo vinculada al TFM y a la investigación doctoral.</p>
+      <div class="hero-grid">
+        <div class="panel">
+          <p class="kicker">Objetivo del ciclo</p>
+          <p class="lead">Comprobar si una experiencia breve de “La Maleta del Tiempo” permite al alumnado comprender la misión, participar activamente, mantener la motivación, colaborar y sentir logro sin que las adaptaciones reduzcan el reto.</p>
+        </div>
+        <div class="panel">
+          <p class="kicker">Prototipo testeado</p>
+          <p><strong>Microexperiencia de 15-20 minutos</strong> de una era histórica, con narrativa breve, reto visual/manipulativo, apoyos graduados, pista progresiva, validación final y pasaporte de logro.</p>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><span>Testers previstos</span><b>6-8</b></div>
+        <div class="stat"><span>Duración sesión</span><b>45’</b></div>
+        <div class="stat"><span>Preguntas</span><b>12</b></div>
+        <div class="stat"><span>Decisión</span><b>Iterar</b></div>
+      </div>
+    </header>
+  </div>
+
+  <nav><div class="wrap">
+    <a href="#contexto">Contexto</a><a href="#sesion">Sesión</a><a href="#tecnicas">Técnicas</a><a href="#encuesta">Encuesta</a><a href="#matriz">Matriz</a><a href="#hipotesis">Hipótesis</a><a href="#iteracion">Iteración</a>
+  </div></nav>
+
+  <main class="wrap">
+    <section id="contexto" class="section-card">
+      <p class="kicker">1 · Punto de partida</p>
+      <h2>Qué se quiere validar</h2>
+      <div class="grid-2">
+        <div>
+          <p class="lead">El Sprint 3 no busca demostrar que todo el proyecto funciona, sino aprender si el núcleo de valor del prototipo es comprensible, motivador y accesible para usuarios reales.</p>
+          <div class="quote">La pregunta central es: ¿el alumnado puede entrar en la experiencia, entender qué debe hacer, participar con un rol real y terminar con sensación de logro?</div>
+        </div>
+        <div class="mini">
+          <h3>Perfil de usuario principal</h3>
+          <p>Alumnado con discapacidad intelectual y/o necesidades educativas especiales, dentro de una propuesta inclusiva abierta a otros perfiles. También se recoge feedback docente como observadores expertos.</p>
+          <h3>Indicadores observables</h3>
+          <p>Comprensión inicial, autonomía con apoyos, participación, colaboración, uso de pistas, nivel de frustración, interés sostenido y recuerdo del aprendizaje.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sesion" class="section-card">
+      <p class="kicker">2 · Diseño de la sesión</p>
+      <h2>Plan de testeo con usuarios/jugadores</h2>
+      <div class="timeline">
+        <div class="step"><span class="num">1</span><b>Bienvenida</b><small>5 min · explicar que se testea el prototipo, no a la persona.</small></div>
+        <div class="step"><span class="num">2</span><b>Exploración</b><small>5 min · observar si la misión se entiende sin demasiada intervención.</small></div>
+        <div class="step"><span class="num">3</span><b>Playtest</b><small>15-20 min · juego en pequeño grupo, sin interrumpir salvo bloqueo.</small></div>
+        <div class="step"><span class="num">4</span><b>Encuesta</b><small>8 min · 12 preguntas con escala, opción múltiple y abiertas.</small></div>
+        <div class="step"><span class="num">5</span><b>Debate breve</b><small>10 min · focus group adaptado para profundizar en sensaciones.</small></div>
+      </div>
+      <div class="grid-3" style="margin-top:18px">
+        <div class="mini"><strong>Rol del facilitador</strong><br>Observar, registrar y preguntar sin defender la solución ni condicionar las respuestas.</div>
+        <div class="mini"><strong>Rol del docente observador</strong><br>Anotar barreras, momentos de éxito, necesidad de pistas y participación real de cada alumno.</div>
+        <div class="mini"><strong>Materiales</strong><br>Prototipo, pasaporte, tarjetas de pista, hoja de observación, encuesta y matriz de feedback.</div>
+      </div>
+    </section>
+
+    <section id="tecnicas" class="section-card">
+      <p class="kicker">3 · Técnicas seleccionadas</p>
+      <h2>Combinación de métodos para obtener feedback</h2>
+      <div class="grid-4">
+        <div class="mini"><h3>Playtest</h3><p>Permite observar la experiencia de juego real: tiempo, bloqueos, interés, pistas y colaboración.</p></div>
+        <div class="mini"><h3>Encuesta breve</h3><p>Recoge datos cuantitativos y cualitativos justo al terminar, sin alargar demasiado la sesión.</p></div>
+        <div class="mini"><h3>Focus group adaptado</h3><p>Ayuda a verbalizar qué gustó, qué confundió y qué cambiarían, con apoyos visuales si hace falta.</p></div>
+        <div class="mini"><h3>Observación</h3><p>Registra lo que el usuario hace, no solo lo que dice: dudas, ayuda solicitada y momentos de logro.</p></div>
+      </div>
+    </section>
+
+    <section id="encuesta" class="section-card">
+      <p class="kicker">4 · Instrumento de validación</p>
+      <h2>Encuesta final para testers</h2>
+      <p class="lead">Tono cercano, claro y motivador. Máximo 12 preguntas para no fatigar a los participantes. En alumnado con mayores necesidades de apoyo, las preguntas pueden leerse en voz alta y responderse con escala visual de 1 a 5.</p>
+      <div class="tabs">
+        <button class="tab active" data-tab="tabla">Tabla de preguntas</button>
+        <button class="tab" data-tab="simulador">Vista interactiva</button>
+      </div>
+      <div id="tabla" class="tab-panel active">
+        <table>
+          <thead><tr><th>#</th><th>Bloque</th><th>Pregunta propuesta</th><th>Tipo</th><th>Objetivo</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Interacción inicial</td><td>Al empezar, ¿entendiste qué misión tenías que resolver?</td><td><span class="tag">Escala 1-5</span></td><td>Medir claridad de la consigna y autonomía inicial.</td></tr>
+            <tr><td>2</td><td>Interacción inicial</td><td>¿Qué parte te ayudó más a saber qué hacer?</td><td><span class="tag">Opción múltiple</span></td><td>Identificar el apoyo más útil: historia, imagen, material, pistas, compañero o docente.</td></tr>
+            <tr><td>3</td><td>Motivación y progreso</td><td>¿Te dieron ganas de seguir avanzando para descubrir la siguiente parte?</td><td><span class="tag">Escala 1-5</span></td><td>Valorar motivación sostenida y efecto de progreso.</td></tr>
+            <tr><td>4</td><td>Motivación y progreso</td><td>¿Cómo te hizo sentir completar el reto y sellar el pasaporte?</td><td><span class="tag">Opción múltiple</span></td><td>Detectar sensación de logro, orgullo, indiferencia o frustración.</td></tr>
+            <tr><td>5</td><td>Motivación y progreso</td><td>¿El reto fue demasiado fácil, adecuado o demasiado difícil?</td><td><span class="tag">Opción múltiple</span></td><td>Ajustar dificultad y equilibrio entre accesibilidad y desafío.</td></tr>
+            <tr><td>6</td><td>Utilidad real</td><td>¿Crees que esta forma de aprender historia/ciencia te ayuda más que una explicación normal?</td><td><span class="tag">Escala 1-5</span></td><td>Validar utilidad percibida frente a métodos tradicionales.</td></tr>
+            <tr><td>7</td><td>Utilidad real</td><td>¿Qué recuerdas ahora de la era histórica o del reto que acabas de hacer?</td><td><span class="tag">Abierta</span></td><td>Comprobar recuerdo inmediato y aprendizaje significativo.</td></tr>
+            <tr><td>8</td><td>Utilidad real</td><td>¿Pudiste participar con tu equipo y aportar algo importante?</td><td><span class="tag">Escala 1-5</span></td><td>Medir inclusión real, rol activo y colaboración.</td></tr>
+            <tr><td>9</td><td>Intención de uso</td><td>¿Te gustaría jugar otra era de la Maleta del Tiempo?</td><td><span class="tag">Escala 1-5</span></td><td>Medir intención de continuidad.</td></tr>
+            <tr><td>10</td><td>Intención de uso</td><td>¿A quién recomendarías esta actividad?</td><td><span class="tag">Opción múltiple</span></td><td>Detectar percepción de público y recomendación.</td></tr>
+            <tr><td>11</td><td>Mejora directa</td><td>¿Qué fue lo que más te gustó de la experiencia?</td><td><span class="tag">Abierta</span></td><td>Identificar elementos que deben mantenerse.</td></tr>
+            <tr><td>12</td><td>Mejora directa</td><td>¿Qué cambiarías, quitarías o añadirías para que fuera mejor?</td><td><span class="tag">Abierta</span></td><td>Recoger oportunidades de mejora para la siguiente iteración.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="simulador" class="tab-panel">
+        <div class="grid-2">
+          <div>
+            <div class="survey-card"><label>1. ¿Entendiste la misión?</label><input type="range" min="1" max="5" value="4" data-score><div class="scale"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div></div>
+            <div class="survey-card"><label>3. ¿Te dieron ganas de seguir?</label><input type="range" min="1" max="5" value="5" data-score></div>
+            <div class="survey-card"><label>6. ¿Ayuda más que una explicación normal?</label><input type="range" min="1" max="5" value="4" data-score></div>
+            <div class="survey-card"><label>8. ¿Pudiste aportar al equipo?</label><input type="range" min="1" max="5" value="4" data-score></div>
+            <div class="survey-card"><label>9. ¿Jugarías otra era?</label><input type="range" min="1" max="5" value="5" data-score></div>
+          </div>
+          <div class="mini">
+            <h3>Resultado orientativo</h3>
+            <p>Media de escalas: <strong id="avg">4,4</strong> / 5</p>
+            <div class="meter"><span id="bar"></span></div>
+            <p id="reading" style="margin-top:14px">La experiencia parece motivadora y comprensible, pero conviene revisar las respuestas abiertas y la observación antes de tomar decisiones.</p>
+            <div class="survey-card"><label>Respuesta abierta destacada</label><textarea rows="5">Me gustó tocar las piezas y sellar el pasaporte, pero al principio no sabía qué pista usar primero.</textarea></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="matriz" class="section-card">
+      <p class="kicker">5 · Procesamiento de la información</p>
+      <h2>Matriz de feedback</h2>
+      <p class="lead">La matriz organiza lo recogido en playtest, encuesta, focus group y observación. Los datos siguientes son una simulación verosímil para preparar la entrega y orientar la siguiente iteración.</p>
+      <div class="matrix">
+        <div class="cell"><h3 class="ok">Qué funciona</h3><ul><li>El pasaporte y el sello generan logro visible.</li><li>La manipulación de materiales facilita comprender el reto.</li><li>La narrativa histórica despierta curiosidad.</li><li>Los roles ayudan a que cada persona tenga una acción útil.</li><li>Las pistas progresivas evitan bloqueo sin resolver por el alumnado.</li></ul></div>
+        <div class="cell"><h3 class="improve">Qué se puede mejorar</h3><ul><li>Reducir texto inicial y dividir la misión en pasos más pequeños.</li><li>Añadir iconos más claros para indicar orden de acciones.</li><li>Diferenciar mejor pista, reto y validación final.</li><li>Preparar una versión más accesible para alumnado con baja lectura.</li><li>Ajustar el tiempo para no cerrar la experiencia con prisa.</li></ul></div>
+        <div class="cell"><h3 class="question">Preguntas</h3><ul><li>¿Cuántas pistas son necesarias antes de que el reto deje de ser retador?</li><li>¿Conviene testear primero una era conocida o una era más sorprendente?</li><li>¿Qué rol funciona mejor para alumnado con menor comunicación verbal?</li><li>¿El pasaporte debe ser individual, grupal o ambas cosas?</li></ul></div>
+        <div class="cell"><h3 class="idea">Nuevas ideas</h3><ul><li>Crear tarjeta “primer paso” con pictogramas y una sola acción.</li><li>Incluir semáforo emocional antes y después del reto.</li><li>Añadir insignias por colaboración, observación y comunicación, no solo por resolver.</li><li>Preparar dos niveles de dificultad por era.</li><li>Generar una mini guía docente de observación rápida.</li></ul></div>
+      </div>
+    </section>
+
+    <section id="hipotesis" class="section-card">
+      <p class="kicker">6 · Validación de hipótesis</p>
+      <h2>Del feedback al aprendizaje validado</h2>
+      <table>
+        <thead><tr><th>Hipótesis</th><th>Indicador</th><th>Resultado esperado</th><th>Lectura del test</th><th>Decisión</th></tr></thead>
+        <tbody>
+          <tr><td>Si la misión se presenta con narrativa breve y apoyo visual, el alumnado comprenderá qué debe hacer.</td><td>80% entiende la misión con una explicación inicial o una pista de arranque.</td><td>Validar claridad inicial.</td><td>Parcialmente validada: se entiende mejor cuando hay material visible, pero el texto inicial pesa demasiado.</td><td>Iterar instrucciones.</td></tr>
+          <tr><td>Si el reto es manipulativo y colaborativo, aumentará la participación activa.</td><td>Al menos 4 de cada 5 participantes realizan una acción relevante.</td><td>Validar inclusión real.</td><td>Validada: los roles facilitan participación, aunque algunos deben ser más concretos.</td><td>Mantener y ajustar roles.</td></tr>
+          <tr><td>Si hay pistas progresivas, se reducirá la frustración sin eliminar el desafío.</td><td>El grupo supera el reto con máximo 2 pistas y sin abandono.</td><td>Validar equilibrio reto-apoyo.</td><td>Parcialmente validada: las pistas ayudan, pero deben estar mejor secuenciadas.</td><td>Rediseñar jerarquía de pistas.</td></tr>
+          <tr><td>Si el progreso se hace visible con pasaporte y sello, aumentará la motivación por continuar.</td><td>Media igual o superior a 4/5 en ganas de jugar otra era.</td><td>Validar intención de continuidad.</td><td>Validada: el cierre tangible funciona como recompensa emocional.</td><td>Escalar a más eras.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="iteracion" class="section-card">
+      <p class="kicker">7 · Decisión de producto</p>
+      <h2>Qué hacemos después del Sprint 3</h2>
+      <div class="decision">
+        <article><h3>Abandonar</h3><p>No procede. El feedback muestra interés, comprensión parcial y valor educativo suficiente para continuar.</p></article>
+        <article><h3>Iterar</h3><p><strong>Decisión recomendada.</strong> Se mantiene el concepto y se mejora la accesibilidad de instrucciones, pistas, roles y tiempos antes de ampliar el prototipo.</p></article>
+        <article><h3>Escalar</h3><p>Todavía no. Antes de crear todas las eras, conviene realizar una segunda iteración con una microexperiencia más depurada.</p></article>
+      </div>
+      <div class="grid-2" style="margin-top:18px">
+        <div class="mini"><h3>Mejoras para la segunda iteración</h3><p>Reducir texto, introducir pictogramas, separar reto/pista/validación, diseñar roles más visibles, incluir semáforo emocional y crear dos niveles de dificultad.</p></div>
+        <div class="mini"><h3>Nuevo objetivo</h3><p>Comprobar si la versión iterada permite que el 90% del grupo comprenda la misión inicial y que todos los participantes realicen al menos una acción significativa durante el reto.</p></div>
+      </div>
+    </section>
+
+    <section class="section-card">
+      <p class="kicker">Entrega para Moodle</p>
+      <h2>Síntesis final</h2>
+      <p>En este Sprint 3 se ha diseñado una sesión de testeo para validar el prototipo de “El Archivo de la Historia” con usuarios/jugadores reales. La propuesta combina playtest, encuesta breve, observación y focus group adaptado, de forma que se obtienen datos cuantitativos y cualitativos. La matriz de feedback permite transformar opiniones, bloqueos y observaciones en decisiones concretas de diseño. El aprendizaje principal es que el concepto funciona y genera motivación, pero necesita una segunda iteración centrada en simplificar instrucciones, clarificar pistas y reforzar la accesibilidad cognitiva sin perder desafío.</p>
+    </section>
+
+    <div class="footer">Sprint 3 · El Archivo de la Historia · Testeo, feedback y aprendizaje validado</div>
+  </main>
+  <button class="print" onclick="window.print()">Imprimir / PDF</button>
+  <script>
+    const tabs=document.querySelectorAll('.tab');
+    tabs.forEach(btn=>btn.addEventListener('click',()=>{tabs.forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById(btn.dataset.tab).classList.add('active')}));
+    function updateScore(){const inputs=[...document.querySelectorAll('[data-score]')];const avg=inputs.reduce((a,b)=>a+Number(b.value),0)/inputs.length;document.getElementById('avg').textContent=avg.toFixed(1).replace('.',',');document.getElementById('bar').style.width=(avg/5*100)+'%';const r=document.getElementById('reading');r.textContent=avg>=4.2?'La validación inicial es alta: conviene iterar detalles antes de escalar a más eras.':avg>=3.2?'La experiencia tiene potencial, pero hay barreras concretas que deben corregirse antes de ampliar el prototipo.':'La propuesta necesita una iteración profunda antes de volver a testear.'}
+    document.querySelectorAll('[data-score]').forEach(i=>i.addEventListener('input',updateScore));updateScore();
+    const links=[...document.querySelectorAll('nav a')];
+    window.addEventListener('scroll',()=>{let current='';document.querySelectorAll('main section[id]').forEach(sec=>{if(scrollY>=sec.offsetTop-140)current=sec.id});links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+current))});
+  </script>
+</body>
+</html>

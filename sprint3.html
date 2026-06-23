@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sprint 3 · Testeo y aprendizaje validado | El Archivo de la Historia</title>
+  <meta name="description" content="Sprint 3 de El Archivo de la Historia: sesión de testeo, encuesta de validación, plantillas web y aprendizaje validado.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,750&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="sprint3.css?v=1">
+</head>
+<body>
+  <div class="time-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div class="page-shell">
+    <header class="hero" id="inicio">
+      <div class="hero__content">
+        <p class="kicker"><span></span> Sprint 3 · Testear para aprender</p>
+        <h1>El Archivo de la Historia: <em>feedback que transforma</em></h1>
+        <p class="hero__lead">Tercera entrega del TFM y tesis doctoral: una sesión de testeo inclusiva para comprobar si la microexperiencia de <strong>La Maleta del Tiempo</strong> se entiende, invita a participar y genera valor educativo sin perder el reto.</p>
+        <div class="hero-kpis" aria-label="Datos clave del sprint">
+          <span><strong>6</strong> testers</span>
+          <span><strong>45</strong> minutos</span>
+          <span><strong>12</strong> preguntas</span>
+          <span><strong>4</strong> técnicas</span>
+        </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#sesion" data-go="sesion"><i class="fa-solid fa-play"></i> Ver la sesión</a>
+          <a class="btn btn--ghost" href="#plantillas" data-go="plantillas"><i class="fa-solid fa-clipboard-check"></i> Abrir plantillas</a>
+        </div>
+      </div>
+
+      <aside class="summary-panel" aria-label="Resumen del ciclo de validación">
+        <div class="time-card">
+          <div class="time-card__ring"><i class="fa-solid fa-suitcase-rolling"></i></div>
+          <div><span>La Maleta del Tiempo</span><strong>Microexperiencia testeada</strong></div>
+        </div>
+        <h2>De la prueba a la decisión</h2>
+        <p>Una misión de 15-20 minutos con carta en lectura fácil, reto manipulativo, roles, pistas graduadas, validación y pasaporte de logro.</p>
+        <div class="metric-grid">
+          <div class="metric"><strong>DUA</strong><span><i class="fa-solid fa-universal-access"></i> Acceso y apoyos graduados</span></div>
+          <div class="metric"><strong>STEAM</strong><span><i class="fa-solid fa-puzzle-piece"></i> Reto activo y cooperativo</span></div>
+          <div class="metric"><strong>4,2</strong><span><i class="fa-solid fa-face-smile"></i> Media ilustrativa / 5</span></div>
+          <div class="metric"><strong>Iterar</strong><span><i class="fa-solid fa-rotate"></i> Decisión del siguiente ciclo</span></div>
+        </div>
+      </aside>
+    </header>
+
+    <section class="stats-bar" aria-label="Resumen ejecutivo">
+      <div class="stat"><strong>Observar</strong><span>Qué hace el alumnado, no solo qué dice</span></div>
+      <div class="stat"><strong>Escuchar</strong><span>Percepciones, bloqueos y momentos de logro</span></div>
+      <div class="stat"><strong>Ordenar</strong><span>Patrones en la matriz de feedback</span></div>
+      <div class="stat"><strong>Decidir</strong><span>Mejoras concretas para la iteración 2</span></div>
+    </section>
+
+    <nav class="nav sprint3-nav" aria-label="Navegación del Sprint 3">
+      <button class="active" type="button" data-section="sesion"><i class="fa-solid fa-calendar-check"></i><span><strong>Sesión</strong><small>Objetivo y guion</small></span></button>
+      <button type="button" data-section="tecnicas"><i class="fa-solid fa-compass"></i><span><strong>Técnicas</strong><small>Cómo se obtiene feedback</small></span></button>
+      <button type="button" data-section="encuesta"><i class="fa-solid fa-list-check"></i><span><strong>Encuesta</strong><small>12 preguntas de validación</small></span></button>
+      <button type="button" data-section="plantillas"><i class="fa-solid fa-table-cells-large"></i><span><strong>Plantillas</strong><small>7 registros cumplimentados</small></span></button>
+      <button type="button" data-section="matriz"><i class="fa-solid fa-comments"></i><span><strong>Feedback</strong><small>Patrones y aprendizajes</small></span></button>
+      <button type="button" data-section="decision"><i class="fa-solid fa-arrow-trend-up"></i><span><strong>Iteración</strong><small>Decisión de producto</small></span></button>
+    </nav>
+
+    <main>
+      <section id="sesion" class="section active" aria-labelledby="sesion-title">
+        <div class="section-heading">
+          <div><span class="section-label">01 · Preparación</span><h2 id="sesion-title">Una sesión que pone el foco en el jugador</h2></div>
+          <p>Se testea el prototipo, nunca a la persona. La facilitación escucha y observa: no defiende la solución ni conduce las respuestas.</p>
+        </div>
+
+        <div class="s3-question-band">
+          <i class="fa-solid fa-circle-question"></i>
+          <div><span>Pregunta de investigación</span><strong>¿El alumnado comprende la misión, puede aportar al equipo y desea continuar la experiencia con apoyos que mantienen el desafío?</strong></div>
+        </div>
+
+        <div class="s3-protocol-grid">
+          <article><span class="s3-step">01</span><i class="fa-solid fa-bullseye"></i><h3>Objetivo</h3><p>Validar comprensión inicial, participación activa, equilibrio reto-apoyo, motivación y utilidad educativa de una misión histórica breve.</p></article>
+          <article><span class="s3-step">02</span><i class="fa-solid fa-vial-circle-check"></i><h3>Hipótesis</h3><p>Si la misión combina lenguaje claro, material manipulativo, roles y pistas progresivas, el alumnado participará con autonomía y sensación de logro.</p></article>
+          <article><span class="s3-step">03</span><i class="fa-solid fa-users"></i><h3>Muestra</h3><p>6 alumnos/as en grupos de 3, con diversidad de necesidades de apoyo; un docente observador y una persona facilitadora.</p></article>
+          <article><span class="s3-step">04</span><i class="fa-solid fa-scale-balanced"></i><h3>Criterio</h3><p>Éxito inicial: 5 de 6 entienden la misión con un máximo de una aclaración y cada participante realiza una acción significativa.</p></article>
+        </div>
+
+        <div class="s3-session-map" aria-label="Secuencia de la sesión de testeo">
+          <article><b>5'</b><i class="fa-solid fa-handshake"></i><h3>Acogida</h3><p>Explicar: “vamos a probar el juego; si algo no funciona, es información valiosa para mejorarlo”.</p></article>
+          <article><b>5'</b><i class="fa-solid fa-scroll"></i><h3>Entrada</h3><p>Presentar carta de misión y observar si el grupo identifica objetivo, materiales y primer paso.</p></article>
+          <article><b>20'</b><i class="fa-solid fa-puzzle-piece"></i><h3>Playtest</h3><p>Jugar sin interrupciones. Registrar ayuda, errores, cooperación, interés y tiempo real.</p></article>
+          <article><b>8'</b><i class="fa-solid fa-clipboard-question"></i><h3>Encuesta</h3><p>Completar 12 preguntas en formato claro, leído en voz alta cuando sea necesario.</p></article>
+          <article><b>7'</b><i class="fa-solid fa-comments"></i><h3>Debate</h3><p>Focus group corto para profundizar en momentos de disfrute, dificultad y propuestas.</p></article>
+        </div>
+
+        <div class="method-band s3-method-band">
+          <div><span class="section-label">Materiales preparados</span><h3>Una prueba cuidada, accesible y comparable</h3><p>Carta de misión en lectura fácil, objetos y tarjetas del reto, roles visibles, tres niveles de pista, pasaporte, hoja de observación y encuesta con escala visual.</p></div>
+          <div class="method-list"><span><i class="fa-solid fa-eye"></i> Observación no intrusiva</span><span><i class="fa-solid fa-language"></i> Preguntas breves y abiertas</span><span><i class="fa-solid fa-heart"></i> Derecho a pausar o no responder</span><span><i class="fa-solid fa-lock-open"></i> Error entendido como dato</span></div>
+        </div>
+      </section>
+
+      <section id="tecnicas" class="section" aria-labelledby="tecnicas-title">
+        <div class="section-heading">
+          <div><span class="section-label">02 · Obtención de feedback</span><h2 id="tecnicas-title">Cuatro miradas sobre la misma experiencia</h2></div>
+          <p>Se combinan datos de comportamiento, respuestas individuales y conversación grupal para no confundir una opinión puntual con un patrón de uso.</p>
+        </div>
+        <div class="s3-technique-grid">
+          <article class="s3-technique-card"><span class="card-icon"><i class="fa-solid fa-gamepad"></i></span><h3>Playtest</h3><p>La técnica principal: el grupo juega la misión completa. No se interrumpe el juego salvo bloqueo o necesidad de apoyo.</p><ul><li>Tiempo, pistas y bloqueos</li><li>Curva de interés por momentos</li><li>Roles y cooperación reales</li></ul></article>
+          <article class="s3-technique-card"><span class="card-icon"><i class="fa-solid fa-clipboard-list"></i></span><h3>Test de usuario</h3><p>Registro por tarea de la interacción observable: misión, reto, pista, validación y cierre.</p><ul><li>¿Lo logra? Sí / con ayuda / no</li><li>Qué gusta, extraña o confunde</li><li>Evidencias inmediatas</li></ul></article>
+          <article class="s3-technique-card"><span class="card-icon"><i class="fa-solid fa-user-group"></i></span><h3>Focus group adaptado</h3><p>Conversación breve al final para comparar experiencias y permitir que las ideas se construyan entre iguales.</p><ul><li>Preguntas concretas y visuales</li><li>Moderación sin influir</li><li>Voz del alumnado y del docente</li></ul></article>
+          <article class="s3-technique-card"><span class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span><h3>Entrevista cualitativa</h3><p>Profundiza en una experiencia individual, especialmente si aparece una barrera o un logro que merece ser entendido.</p><ul><li>Descubrimientos y necesidades</li><li>Impacto emocional</li><li>Preguntas que quedan abiertas</li></ul></article>
+        </div>
+
+        <div class="s3-evidence-strip">
+          <div><span class="section-label">Qué se registra</span><h3>Indicadores observables</h3></div>
+          <div class="s3-indicator-pills"><span><i class="fa-solid fa-lightbulb"></i> Comprensión</span><span><i class="fa-solid fa-hand"></i> Acción</span><span><i class="fa-solid fa-people-group"></i> Participación</span><span><i class="fa-solid fa-stairs"></i> Uso de pistas</span><span><i class="fa-solid fa-face-smile"></i> Emoción</span><span><i class="fa-solid fa-book-open"></i> Recuerdo</span></div>
+        </div>
+      </section>
+
+      <section id="encuesta" class="section" aria-labelledby="encuesta-title">
+        <div class="section-heading">
+          <div><span class="section-label">03 · Encuesta de validación</span><h2 id="encuesta-title">12 preguntas, 5 bloques, una voz clara</h2></div>
+          <p>Lenguaje cercano y motivador. La encuesta se responde al terminar y puede apoyarse con caras, pictogramas o lectura en voz alta.</p>
+        </div>
+        <div class="s3-survey-intro"><i class="fa-solid fa-comment-dots"></i><p><strong>Antes de empezar:</strong> “No hay respuestas buenas o malas. Queremos saber qué ha sido fácil, difícil o divertido para poder diseñar una misión mejor”.</p></div>
+        <div class="s3-table-wrap">
+          <table class="s3-survey-table">
+            <thead><tr><th>#</th><th>Bloque</th><th>Pregunta propuesta</th><th>Tipo</th><th>Qué queremos descubrir</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Interacción inicial</td><td>Al empezar, ¿entendiste qué misión tenías que resolver?</td><td><span class="s3-type">Escala 1-5</span></td><td>Claridad de la consigna y autonomía inicial.</td></tr>
+              <tr><td>2</td><td>Interacción inicial</td><td>¿Qué te ayudó más a saber qué hacer?</td><td><span class="s3-type">Opción múltiple</span></td><td>Qué apoyo funciona mejor: historia, imagen, material, pista, compañero o docente.</td></tr>
+              <tr><td>3</td><td>Motivación y progreso</td><td>¿Te dieron ganas de seguir avanzando para descubrir la siguiente parte?</td><td><span class="s3-type">Escala 1-5</span></td><td>Motivación sostenida y efecto de progreso.</td></tr>
+              <tr><td>4</td><td>Motivación y progreso</td><td>¿Cómo te hizo sentir completar el reto y sellar el pasaporte?</td><td><span class="s3-type">Opción múltiple</span></td><td>Sensación de logro, orgullo, indiferencia o frustración.</td></tr>
+              <tr><td>5</td><td>Motivación y progreso</td><td>¿El reto fue demasiado fácil, adecuado o demasiado difícil?</td><td><span class="s3-type">Opción múltiple</span></td><td>Equilibrio entre accesibilidad y desafío.</td></tr>
+              <tr><td>6</td><td>Utilidad real</td><td>¿Esta forma de aprender historia te ayuda más que una explicación normal?</td><td><span class="s3-type">Escala 1-5</span></td><td>Valor educativo percibido frente a métodos habituales.</td></tr>
+              <tr><td>7</td><td>Utilidad real</td><td>¿Qué recuerdas ahora de la era o del reto que acabas de hacer?</td><td><span class="s3-type">Abierta</span></td><td>Recuerdo inmediato y aprendizaje significativo.</td></tr>
+              <tr><td>8</td><td>Utilidad real</td><td>¿Pudiste participar con tu equipo y aportar algo importante?</td><td><span class="s3-type">Escala 1-5</span></td><td>Inclusión real, rol activo y colaboración.</td></tr>
+              <tr><td>9</td><td>Intención de uso</td><td>¿Te gustaría jugar otra era de La Maleta del Tiempo?</td><td><span class="s3-type">Escala 1-5</span></td><td>Intención de continuidad.</td></tr>
+              <tr><td>10</td><td>Intención de uso</td><td>¿A quién recomendarías esta actividad?</td><td><span class="s3-type">Opción múltiple</span></td><td>Percepción de público y recomendación.</td></tr>
+              <tr><td>11</td><td>Mejora directa</td><td>¿Qué fue lo que más te gustó de la experiencia?</td><td><span class="s3-type">Abierta</span></td><td>Elementos que se deben mantener.</td></tr>
+              <tr><td>12</td><td>Mejora directa</td><td>¿Qué cambiarías, quitarías o añadirías para que fuera mejor?</td><td><span class="s3-type">Abierta</span></td><td>Oportunidades de mejora para el siguiente ciclo.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="s3-score-demo">
+          <div><span class="section-label">Simulador de lectura</span><h3>Explora cómo se interpreta una media de escala</h3><p>Esta herramienta no sustituye la conversación ni la observación: sirve para leer de un vistazo los cinco indicadores cuantitativos de la encuesta.</p></div>
+          <div class="s3-score-controls">
+            <label>Comprensión <input data-score type="range" min="1" max="5" value="4"></label>
+            <label>Motivación <input data-score type="range" min="1" max="5" value="5"></label>
+            <label>Utilidad <input data-score type="range" min="1" max="5" value="4"></label>
+            <label>Participación <input data-score type="range" min="1" max="5" value="4"></label>
+            <label>Continuidad <input data-score type="range" min="1" max="5" value="4"></label>
+          </div>
+          <div class="s3-score-result"><strong id="scoreAverage">4,2</strong><span>/ 5</span><div><i id="scoreBar"></i></div><p id="scoreReading">Buena señal: mantener el núcleo y concentrar la iteración en las barreras detectadas.</p></div>
+        </div>
+      </section>
+
+      <section id="plantillas" class="section" aria-labelledby="plantillas-title">
+        <div class="section-heading">
+          <div><span class="section-label">04 · Instrumentos web</span><h2 id="plantillas-title">Las plantillas, convertidas en registros vivos</h2></div>
+          <p>Versión web completa de las plantillas de Clase 3. Los contenidos son un ejemplo de registro de ensayo, listo para contrastarse y sustituirse por los datos de la sesión real.</p>
+        </div>
+        <div class="s3-template-tabs" role="tablist" aria-label="Plantillas de testeo">
+          <button class="active" type="button" data-template="test"><i class="fa-solid fa-list-check"></i> Test de usuario</button>
+          <button type="button" data-template="interview"><i class="fa-solid fa-user"></i> Entrevista</button>
+          <button type="button" data-template="focus"><i class="fa-solid fa-users"></i> Focus group</button>
+          <button type="button" data-template="interaction"><i class="fa-solid fa-handshake"></i> Interacción</button>
+          <button type="button" data-template="feedback-template"><i class="fa-solid fa-note-sticky"></i> Feedback</button>
+          <button type="button" data-template="hypotheses"><i class="fa-solid fa-flask"></i> Hipótesis</button>
+          <button type="button" data-template="dafo"><i class="fa-solid fa-table-cells-large"></i> DAFO</button>
+        </div>
+
+        <article id="test" class="s3-template active" role="tabpanel">
+          <div class="s3-template-head"><div><span>Plantilla · Test de usuario</span><h3>Registro por tareas de la misión</h3></div><p><strong>Proyecto:</strong> El Archivo de la Historia · <strong>Participante:</strong> Grupo A (3 alumnos/as) · <strong>Sesión:</strong> piloto de ensayo</p></div>
+          <div class="s3-task-table-wrap"><table class="s3-task-table"><thead><tr><th>Tarea</th><th>¿La completa?</th><th>Qué ha gustado</th><th>Qué no ha gustado</th><th>Qué sorprende</th><th>Qué extraña</th></tr></thead><tbody>
+            <tr><td><strong>1. Entender la carta</strong></td><td><span class="s3-status partial">Con 1 aclaración</span></td><td>El sobre y el sello activan curiosidad.</td><td>El primer párrafo tiene demasiado texto.</td><td>Reconocen el objetivo cuando ven el mapa.</td><td>Un icono para “empezar”.</td></tr>
+            <tr><td><strong>2. Repartir roles</strong></td><td><span class="s3-status yes">Sí</span></td><td>Elegir un rol hace que todos entren al juego.</td><td>“Guardián” no explica su tarea.</td><td>El portavoz cambia durante el reto.</td><td>Tarjetas con acción y símbolo.</td></tr>
+            <tr><td><strong>3. Resolver el reto</strong></td><td><span class="s3-status yes">Sí</span></td><td>Piezas grandes, colores y manipulación.</td><td>Una asociación histórica resulta abstracta.</td><td>Un compañero corrige sin que se lo pidan.</td><td>Ejemplo visual de una pieza resuelta.</td></tr>
+            <tr><td><strong>4. Pedir una pista</strong></td><td><span class="s3-status partial">Tras espera</span></td><td>La segunda pista orienta sin resolver.</td><td>Dudan antes de pedir ayuda.</td><td>La pista visual desbloquea la conversación.</td><td>Señal física para solicitarla.</td></tr>
+            <tr><td><strong>5. Cerrar y sellar</strong></td><td><span class="s3-status yes">Sí</span></td><td>El sello y la clave final generan orgullo.</td><td>El cierre pasa demasiado rápido.</td><td>Piden “otra maleta”.</td><td>Contar qué han aprendido antes del sello.</td></tr>
+          </tbody></table></div>
+        </article>
+
+        <article id="interview" class="s3-template" role="tabpanel">
+          <div class="s3-template-head"><div><span>Plantilla · Entrevista cualitativa</span><h3>Explorar una experiencia individual</h3></div><p><strong>Proyecto:</strong> El Archivo de la Historia · <strong>Perfil:</strong> alumno/a participante · <strong>Versión:</strong> ensayo 1</p></div>
+          <div class="s3-interview-layout">
+            <aside><h4>Entrevista</h4><p><strong>Objetivo:</strong> comprender qué apoyo facilitó la participación y qué barrera quedó abierta.</p><p><strong>Tema:</strong> experiencia de la misión histórica, especialmente las pistas y el rol.</p><p><strong>Preguntas:</strong> ¿qué entendiste primero?, ¿cuándo pediste ayuda?, ¿qué te hizo sentir capaz?</p><hr><h4>Usuario / cliente</h4><p>Alumno/a de secundaria con necesidad de apoyos cognitivos puntuales. Participa habitualmente en actividades cooperativas y responde bien a materiales visuales y manipulativos.</p></aside>
+            <div class="s3-observation-grid"><article><h4>¿Qué has descubierto?</h4><p>“Si miro el mapa sé qué toca hacer. La carta era más difícil porque había muchas palabras”.</p></article><article><h4>¿Qué te faltó?</h4><p>Un dibujo de la primera acción y una tarjeta para saber que podía pedir pista sin hacerlo “mal”.</p></article><article><h4>¿Qué te impactó?</h4><p>Abrir el candado simbólico y poner el sello: “parecía que de verdad habíamos viajado”.</p></article><article><h4>¿Qué queda por profundizar?</h4><p>Cómo dar pistas sin que el alumno espere al adulto; se probará un token de pista y tres niveles visuales.</p></article></div>
+          </div>
+        </article>
+
+        <article id="focus" class="s3-template" role="tabpanel">
+          <div class="s3-template-head"><div><span>Plantilla · Focus group</span><h3>Conversación grupal al cerrar el juego</h3></div><p><strong>Proyecto:</strong> El Archivo de la Historia · <strong>Participantes:</strong> 6 alumnos/as + docente observador · <strong>Duración:</strong> 7 min</p></div>
+          <div class="s3-focus-layout"><aside><h4>Pre-sesión</h4><p><strong>Objetivo:</strong> hacer visibles acuerdos y diferencias tras el playtest.</p><p><strong>Pregunta guía:</strong> ¿qué parte os ayudó a ser un equipo y qué cambiaríais para que otra clase disfrute más?</p><p><strong>Regla:</strong> todas las voces cuentan; se puede responder con palabra, gesto o tarjeta.</p></aside><div class="s3-observation-grid"><article><h4>Descubrimientos</h4><p>La narrativa y el objeto físico atraen de inmediato; la comprensión llega al conectar carta, mapa y material.</p></article><article><h4>Falta por descubrir</h4><p>Probar si los roles siguen funcionando cuando el grupo tiene cuatro integrantes y ritmos de lectura diferentes.</p></article><article><h4>Lo que impacta</h4><p>El grupo repite que “nadie se queda sin hacer nada” cuando las piezas están repartidas.</p></article><article><h4>Dudas que quedan</h4><p>¿Cuánto texto puede tener la historia sin convertir la entrada en una explicación? Se testearán dos versiones.</p></article></div></div>
+        </article>
+
+        <article id="interaction" class="s3-template" role="tabpanel">
+          <div class="s3-template-head"><div><span>Plantilla · Interacción constructiva</span><h3>Lo que ocurre durante el playtest</h3></div><p><strong>Proyecto:</strong> El Archivo de la Historia · <strong>Equipo:</strong> Grupo A y B · <strong>Registro:</strong> facilitadora</p></div>
+          <div class="s3-task-table-wrap"><table class="s3-task-table s3-interaction-table"><thead><tr><th>Momento</th><th>Interacciones</th><th>Errores</th><th>Sorpresas</th><th>Comentarios</th></tr></thead><tbody>
+            <tr><td>Entrada</td><td>Señalan el mapa y preguntan “¿dónde vamos?”</td><td>Dos alumnos leen la carta como instrucciones completas.</td><td>El sobre sellado genera silencio y atención.</td><td>Separar “historia” y “qué hago ahora”.</td></tr>
+            <tr><td>Roles</td><td>Negocian quién busca y quién ordena.</td><td>El rol de guardián se interpreta como “mirar”.</td><td>Un alumno propone rotar el rol de portavoz.</td><td>Nombrar roles con verbos de acción.</td></tr>
+            <tr><td>Reto</td><td>Clasifican piezas, verbalizan pistas y se corrigen.</td><td>Confunden dos símbolos parecidos.</td><td>La manipulación permite participar a quien no lee.</td><td>Aumentar contraste y añadir textura.</td></tr>
+            <tr><td>Pistas</td><td>Un compañero ofrece la primera antes de pedirla.</td><td>Esperan demasiado para usar la segunda.</td><td>La pista visual reactiva el diálogo.</td><td>Token visible de “pedir ayuda”.</td></tr>
+            <tr><td>Cierre</td><td>Celebran y comparan sellos.</td><td>El resumen de aprendizaje se omite por tiempo.</td><td>Pregunta espontánea: “¿cuál es la siguiente era?”</td><td>Reservar 2 min de recuerdo y celebración.</td></tr>
+          </tbody></table></div>
+        </article>
+
+        <article id="feedback-template" class="s3-template" role="tabpanel">
+          <div class="s3-template-head"><div><span>Plantilla · Matriz de feedback</span><h3>Apuntes de testeo organizados</h3></div><p><strong>Fuente:</strong> playtest, encuesta, entrevista y focus group · <strong>Lectura:</strong> patrones repetidos</p></div>
+          <div class="s3-feedback-matrix"><article class="works"><h4><i class="fa-solid fa-check"></i> Qué funciona</h4><ul><li>Narrativa de viaje y objetos físicos activan curiosidad.</li><li>Reto manipulativo permite aportaciones diversas.</li><li>Pasaporte y sello cierran con sensación de logro.</li><li>Pista visual desbloquea sin resolver el reto.</li></ul></article><article class="improve"><h4><i class="fa-solid fa-screwdriver-wrench"></i> Qué mejorar</h4><ul><li>Reducir texto de entrada y separar la consigna.</li><li>Nombrar los roles con una acción visible.</li><li>Aumentar contraste entre símbolos parecidos.</li><li>Dar más tiempo al cierre de aprendizaje.</li></ul></article><article class="questions"><h4><i class="fa-solid fa-circle-question"></i> Preguntas</h4><ul><li>¿La carta breve se entiende sin aclaración?</li><li>¿El token hará más fácil pedir pista?</li><li>¿Dos niveles de dificultad equilibran mejor el reto?</li></ul></article><article class="ideas"><h4><i class="fa-solid fa-lightbulb"></i> Ideas</h4><ul><li>Tarjeta “primero / después / final”.</li><li>Roles con pictograma, verbo y pieza física.</li><li>Semáforo emocional al terminar cada fase.</li></ul></article></div>
+        </article>
+
+        <article id="hypotheses" class="s3-template" role="tabpanel">
+          <div class="s3-template-head"><div><span>Plantilla · Matriz de hipótesis</span><h3>Qué se confirma y qué se rediseña</h3></div><p><strong>Objetivo:</strong> participación comprensible, inclusiva y motivadora · <strong>Decisión:</strong> iterar</p></div>
+          <div class="s3-hypothesis-list">
+            <article><span class="s3-hyp-number">H1</span><div><h4>La carta en lectura fácil permite iniciar con autonomía.</h4><p><strong>Prototipo:</strong> carta + mapa. <strong>Evidencia:</strong> 4 de 6 comprenden; dos requieren aclaración por exceso de texto.</p></div><span class="s3-verdict partial">Parcial</span><div class="s3-plusminus"><span><b>+</b> El mapa da contexto.</span><span><b>−</b> La primera instrucción pesa demasiado.</span></div></article>
+            <article><span class="s3-hyp-number">H2</span><div><h4>El reto manipulativo y los roles aumentan la participación real.</h4><p><strong>Prototipo:</strong> piezas, roles y colaboración. <strong>Evidencia:</strong> las 6 personas realizan una acción; un rol requiere mayor concreción.</p></div><span class="s3-verdict yes">Validada</span><div class="s3-plusminus"><span><b>+</b> Todos aportan algo visible.</span><span><b>−</b> “Guardián” es ambiguo.</span></div></article>
+            <article><span class="s3-hyp-number">H3</span><div><h4>Las pistas graduadas reducen frustración sin eliminar el reto.</h4><p><strong>Prototipo:</strong> 3 pistas. <strong>Evidencia:</strong> se completa con dos; existe demora para pedir la primera.</p></div><span class="s3-verdict partial">Parcial</span><div class="s3-plusminus"><span><b>+</b> La pista visual orienta bien.</span><span><b>−</b> Falta normalizar pedir ayuda.</span></div></article>
+            <article><span class="s3-hyp-number">H4</span><div><h4>Pasaporte y sello incrementan el deseo de continuar.</h4><p><strong>Prototipo:</strong> cierre tangible. <strong>Evidencia:</strong> intención media ilustrativa de 4,3/5 y demanda espontánea de otra era.</p></div><span class="s3-verdict yes">Validada</span><div class="s3-plusminus"><span><b>+</b> El logro se recuerda y comparte.</span><span><b>−</b> Falta reflexión final.</span></div></article>
+          </div>
+        </article>
+
+        <article id="dafo" class="s3-template" role="tabpanel">
+          <div class="s3-template-head"><div><span>Plantilla · Matriz DAFO</span><h3>Lectura crítica de la viabilidad</h3></div><p><strong>Proyecto:</strong> El Archivo de la Historia · <strong>Foco:</strong> primera microexperiencia testeada</p></div>
+          <div class="s3-dafo-grid"><article class="strength"><h4>Fortalezas</h4><ul><li>Narrativa histórica con propósito claro.</li><li>Material manipulativo y apoyos DUA.</li><li>Participación distribuida y logro visible.</li></ul></article><article class="opportunity"><h4>Oportunidades</h4><ul><li>Crear más eras con el mismo patrón de juego.</li><li>Integrar evaluación competencial y STEAM.</li><li>Ofrecer guía docente reutilizable.</li></ul></article><article class="weakness"><h4>Debilidades</h4><ul><li>Entrada narrativa aún densa.</li><li>Algunos roles y símbolos son ambiguos.</li><li>El cierre reflexivo necesita más tiempo.</li></ul></article><article class="threat"><h4>Amenazas</h4><ul><li>Si el apoyo adulto sustituye la acción, disminuye autonomía.</li><li>El grupo o tiempo disponible puede variar mucho.</li><li>Escalar sin iterar amplificaría las barreras.</li></ul></article></div>
+        </article>
+      </section>
+
+      <section id="matriz" class="section" aria-labelledby="matriz-title">
+        <div class="section-heading">
+          <div><span class="section-label">05 · Procesamiento</span><h2 id="matriz-title">Del comentario aislado al patrón de diseño</h2></div>
+          <p>La matriz no es un mural de opiniones: traduce hallazgos repetidos en una hipótesis revisada y una mejora comprobable en el siguiente test.</p>
+        </div>
+        <div class="s3-feedback-matrix s3-large-matrix"><article class="works"><h4><i class="fa-solid fa-check"></i> Qué funciona</h4><p>El juego entra por la emoción y la acción, no por una explicación larga.</p><ul><li>Sobre, sello y mapa sitúan la misión.</li><li>Piezas físicas hacen visible la colaboración.</li><li>La recompensa final genera orgullo y continuidad.</li></ul></article><article class="improve"><h4><i class="fa-solid fa-screwdriver-wrench"></i> Qué mejorar</h4><p>La accesibilidad cognitiva debe empezar antes del reto, en la primera consigna.</p><ul><li>Reducir la carta a una frase-objetivo.</li><li>Convertir roles en verbos y acciones.</li><li>Mejorar contraste y secuencia de pistas.</li></ul></article><article class="questions"><h4><i class="fa-solid fa-circle-question"></i> Preguntas</h4><p>Se abre una nueva incertidumbre, no se oculta.</p><ul><li>¿La versión resumida permite 90% de comprensión inicial?</li><li>¿El token de pista reduce la espera?</li><li>¿El cierre guiado fortalece el recuerdo?</li></ul></article><article class="ideas"><h4><i class="fa-solid fa-lightbulb"></i> Ideas</h4><p>Ideas conectadas directamente con una evidencia.</p><ul><li>Tablero visual “Misión · Reto · Pista · Sello”.</li><li>Tarjetas de rol: buscar, ordenar, comprobar, contar.</li><li>Dos niveles de reto con la misma narrativa.</li></ul></article></div>
+        <div class="s3-synthesis-grid"><article><span class="section-label">Objetivo</span><h3>Parcialmente cumplido</h3><p>La microexperiencia permite comprensión y participación, pero la entrada todavía requiere una aclaración extra en una parte de la muestra.</p></article><article><span class="section-label">Aprendizaje validado</span><h3>El núcleo tiene valor</h3><p>La combinación de narrativa, manipulación, cooperación y logro visible es atractiva; el diseño de apoyos necesita una iteración más fina.</p></article><article><span class="section-label">Evidencia para volver a probar</span><h3>Una mejora, un indicador</h3><p>Reducir texto + tarjeta de inicio → al menos 5 de 6 personas identifican por sí mismas la primera acción.</p></article></div>
+      </section>
+
+      <section id="decision" class="section" aria-labelledby="decision-title">
+        <div class="section-heading">
+          <div><span class="section-label">06 · Aprendizaje validado</span><h2 id="decision-title">La decisión no es escalar: es iterar con precisión</h2></div>
+          <p>Las primeras señales son prometedoras, pero el producto no se da por terminado. Se mejora la entrada, la autonomía y el cierre antes de multiplicar las eras.</p>
+        </div>
+        <div class="s3-decision-grid"><article><i class="fa-solid fa-ban"></i><span>Descartar</span><h3>No procede</h3><p>La experiencia muestra interés, participación y valor educativo; no hay evidencia para abandonar el concepto.</p></article><article class="recommended"><i class="fa-solid fa-rotate"></i><span>Decisión recomendada</span><h3>Iterar</h3><p>Conservar el núcleo y rediseñar instrucciones, roles, sistema de pistas y cierre reflexivo.</p></article><article><i class="fa-solid fa-rocket"></i><span>Escalar</span><h3>Todavía no</h3><p>Crear todas las eras ahora extendería barreras todavía no resueltas. Primero se valida la segunda versión.</p></article></div>
+        <div class="s3-iteration-roadmap"><div><span class="section-label">Segundo ciclo</span><h3>Plan de mejora y nuevo test</h3></div><ol><li><b>Rediseñar</b><span>Carta en una frase, tablero de secuencia, roles con acción y token de pista.</span></li><li><b>Probar</b><span>Misma misión con 6 nuevos testers o contrabalanceando la versión anterior.</span></li><li><b>Medir</b><span>Comprensión inicial, uso autónomo de pistas, acción significativa y recuerdo final.</span></li><li><b>Decidir</b><span>Escalar el patrón solo si los indicadores alcanzan el umbral acordado.</span></li></ol></div>
+        <div class="executive s3-executive"><h2>Conclusión de la entrega</h2><p>El Sprint 3 convierte el prototipo en una fuente de aprendizaje. La sesión integra playtest, test de usuario, entrevista y focus group; la encuesta recoge valor, motivación e intención de uso; y las plantillas procesan el feedback hasta convertirlo en decisiones. El Archivo de la Historia mantiene su núcleo de valor: una experiencia histórica inclusiva donde cada persona puede comprender, actuar, colaborar y sentirse capaz.</p><button class="btn btn--primary" type="button" data-print><i class="fa-solid fa-print"></i> Imprimir / guardar en PDF</button></div>
+      </section>
+    </main>
+  </div>
+  <script src="sprint3.js?v=1"></script>
+</body>
+</html>
