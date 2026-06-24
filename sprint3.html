@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,750&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css?v=8">
-  <link rel="stylesheet" href="sprint3.css?v=1">
+  <link rel="stylesheet" href="sprint3.css?v=2">
 </head>
 <body>
   <div class="time-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
@@ -84,6 +84,8 @@
           <article><span class="s3-step">04</span><i class="fa-solid fa-scale-balanced"></i><h3>Criterio</h3><p>Éxito inicial: 5 de 6 entienden la misión con un máximo de una aclaración y cada participante realiza una acción significativa.</p></article>
         </div>
 
+        <h3 class="s3-session-structure-title">Estructura de la sesión</h3>
+
         <div class="s3-session-map" aria-label="Secuencia de la sesión de testeo">
           <article><b>5'</b><i class="fa-solid fa-handshake"></i><h3>Acogida</h3><p>Explicar: “vamos a probar el juego; si algo no funciona, es información valiosa para mejorarlo”.</p></article>
           <article><b>5'</b><i class="fa-solid fa-scroll"></i><h3>Entrada</h3><p>Presentar carta de misión y observar si el grupo identifica objetivo, materiales y primer paso.</p></article>
@@ -124,20 +126,20 @@
         <div class="s3-survey-intro"><i class="fa-solid fa-comment-dots"></i><p><strong>Antes de empezar:</strong> “No hay respuestas buenas o malas. Queremos saber qué ha sido fácil, difícil o divertido para poder diseñar una misión mejor”.</p></div>
         <div class="s3-table-wrap">
           <table class="s3-survey-table">
-            <thead><tr><th>#</th><th>Bloque</th><th>Pregunta propuesta</th><th>Tipo</th><th>Qué queremos descubrir</th></tr></thead>
+            <thead><tr><th>#</th><th>Bloque</th><th>Pregunta propuesta</th><th>Tipo</th><th>Opciones de respuesta</th><th>Qué queremos descubrir</th></tr></thead>
             <tbody>
-              <tr><td>1</td><td>Interacción inicial</td><td>Al empezar, ¿entendiste qué misión tenías que resolver?</td><td><span class="s3-type">Escala 1-5</span></td><td>Claridad de la consigna y autonomía inicial.</td></tr>
-              <tr><td>2</td><td>Interacción inicial</td><td>¿Qué te ayudó más a saber qué hacer?</td><td><span class="s3-type">Opción múltiple</span></td><td>Qué apoyo funciona mejor: historia, imagen, material, pista, compañero o docente.</td></tr>
-              <tr><td>3</td><td>Motivación y progreso</td><td>¿Te dieron ganas de seguir avanzando para descubrir la siguiente parte?</td><td><span class="s3-type">Escala 1-5</span></td><td>Motivación sostenida y efecto de progreso.</td></tr>
-              <tr><td>4</td><td>Motivación y progreso</td><td>¿Cómo te hizo sentir completar el reto y sellar el pasaporte?</td><td><span class="s3-type">Opción múltiple</span></td><td>Sensación de logro, orgullo, indiferencia o frustración.</td></tr>
-              <tr><td>5</td><td>Motivación y progreso</td><td>¿El reto fue demasiado fácil, adecuado o demasiado difícil?</td><td><span class="s3-type">Opción múltiple</span></td><td>Equilibrio entre accesibilidad y desafío.</td></tr>
-              <tr><td>6</td><td>Utilidad real</td><td>¿Esta forma de aprender historia te ayuda más que una explicación normal?</td><td><span class="s3-type">Escala 1-5</span></td><td>Valor educativo percibido frente a métodos habituales.</td></tr>
-              <tr><td>7</td><td>Utilidad real</td><td>¿Qué recuerdas ahora de la era o del reto que acabas de hacer?</td><td><span class="s3-type">Abierta</span></td><td>Recuerdo inmediato y aprendizaje significativo.</td></tr>
-              <tr><td>8</td><td>Utilidad real</td><td>¿Pudiste participar con tu equipo y aportar algo importante?</td><td><span class="s3-type">Escala 1-5</span></td><td>Inclusión real, rol activo y colaboración.</td></tr>
-              <tr><td>9</td><td>Intención de uso</td><td>¿Te gustaría jugar otra era de La Maleta del Tiempo?</td><td><span class="s3-type">Escala 1-5</span></td><td>Intención de continuidad.</td></tr>
-              <tr><td>10</td><td>Intención de uso</td><td>¿A quién recomendarías esta actividad?</td><td><span class="s3-type">Opción múltiple</span></td><td>Percepción de público y recomendación.</td></tr>
-              <tr><td>11</td><td>Mejora directa</td><td>¿Qué fue lo que más te gustó de la experiencia?</td><td><span class="s3-type">Abierta</span></td><td>Elementos que se deben mantener.</td></tr>
-              <tr><td>12</td><td>Mejora directa</td><td>¿Qué cambiarías, quitarías o añadirías para que fuera mejor?</td><td><span class="s3-type">Abierta</span></td><td>Oportunidades de mejora para el siguiente ciclo.</td></tr>
+              <tr><td>1</td><td>Interacción inicial</td><td>Al empezar, ¿entendiste qué misión tenías que resolver?</td><td><span class="s3-type">Escala 1-5</span></td><td><span class="s3-scale-hint">Escala de estrellas: 1 — No entendí · 5 — Entendí correctamente</span></td><td>Claridad de la consigna y autonomía inicial.</td></tr>
+              <tr><td>2</td><td>Interacción inicial</td><td>¿Qué te ayudó más a saber qué tenías que hacer?</td><td><span class="s3-type">Opción múltiple</span></td><td><ul class="s3-response-list"><li>La historia inicial</li><li>Las imágenes</li><li>Los objetos o materiales</li><li>Las pistas</li><li>Mi equipo</li><li>El/la docente</li><li>Al principio no lo entendí</li><li>Otra cosa</li></ul></td><td>Qué apoyo funciona mejor: historia, imagen, material, pista, compañero o docente.</td></tr>
+              <tr><td>3</td><td>Motivación y progreso</td><td>¿Te dieron ganas de seguir avanzando para descubrir la siguiente parte?</td><td><span class="s3-type">Escala 1-5</span></td><td><span class="s3-scale-hint">Escala de estrellas: 1 — No quiero descubrir más · 5 — Quiero seguir descubriendo</span></td><td>Motivación sostenida y efecto de progreso.</td></tr>
+              <tr><td>4</td><td>Motivación y progreso</td><td>¿Cómo te sentiste al completar el reto y sellar el pasaporte?</td><td><span class="s3-type">Opción múltiple</span></td><td><ul class="s3-response-list"><li>Contento/a</li><li>Orgulloso/a</li><li>Con ganas de seguir</li><li>Tranquilo/a</li><li>Me dio igual</li><li>Confundido/a</li><li>Frustrado/a</li></ul></td><td>Sensación de logro, orgullo, indiferencia o frustración.</td></tr>
+              <tr><td>5</td><td>Motivación y progreso</td><td>¿Cómo te pareció el reto?</td><td><span class="s3-type">Opción múltiple</span></td><td><ul class="s3-response-list"><li>Muy fácil</li><li>Un poco fácil</li><li>Adecuado</li><li>Un poco difícil</li><li>Muy difícil</li></ul></td><td>Equilibrio entre accesibilidad y desafío; detectar si el reto está bien calibrado.</td></tr>
+              <tr><td>6</td><td>Utilidad real</td><td>¿Esta forma de aprender historia te ayuda más que una explicación normal?</td><td><span class="s3-type">Escala 1-5</span></td><td><span class="s3-scale-hint">Escala de estrellas: 1 — Me ayuda menos · 5 — Me ayuda mucho!</span></td><td>Valor educativo percibido frente a métodos habituales.</td></tr>
+              <tr><td>7</td><td>Utilidad real</td><td>¿Qué recuerdas ahora de la era o del reto que acabas de hacer?</td><td><span class="s3-type">Abierta</span></td><td>Cuadro de texto abierto</td><td>Recuerdo inmediato y aprendizaje significativo.</td></tr>
+              <tr><td>8</td><td>Utilidad real</td><td>¿Pudiste participar con tu equipo y aportar algo importante?</td><td><span class="s3-type">Escala 1-5</span></td><td><span class="s3-scale-hint">Escala de estrellas: 1 — No participé ni aporté · 5 — Participé y aporté mucho</span></td><td>Inclusión real, rol activo y colaboración.</td></tr>
+              <tr><td>9</td><td>Intención de uso</td><td>¿Te gustaría jugar otra era de La Maleta del Tiempo?</td><td><span class="s3-type">Escala 1-5</span></td><td><span class="s3-scale-hint">Escala de estrellas: 1 — No jugaría de nuevo · 3 — Jugaría alguna vez · 5 — Sí jugaría de nuevo</span></td><td>Intención de continuidad.</td></tr>
+              <tr><td>10</td><td>Intención de uso</td><td>¿A quién recomendarías esta actividad?</td><td><span class="s3-type">Opción múltiple</span></td><td><ul class="s3-response-list"><li>A mi clase</li><li>A mis amigos/as</li><li>A mi familia</li><li>A estudiantes de otros cursos</li><li>A nadie</li><li>Otro/a</li></ul></td><td>Percepción de público y recomendación.</td></tr>
+              <tr><td>11</td><td>Mejora directa</td><td>¿Qué fue lo que más te gustó de la experiencia?</td><td><span class="s3-type">Abierta</span></td><td>Cuadro de texto abierto</td><td>Elementos que se deben mantener.</td></tr>
+              <tr><td>12</td><td>Mejora directa</td><td>¿Qué cambiarías, quitarías o añadirías para que fuera mejor?</td><td><span class="s3-type">Abierta</span></td><td>Cuadro de texto abierto</td><td>Oportunidades de mejora para el siguiente ciclo.</td></tr>
             </tbody>
           </table>
         </div>
