@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proyecto Final · El Archivo de la Historia</title>
+  <meta name="description" content="Proyecto final del módulo de prototipado: ciclo completo de Value Proposition Canvas, prototipo, matriz de feedback y aprendizaje validado de El Archivo de la Historia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,750&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="sprint3.css?v=4">
+  <link rel="stylesheet" href="final.css?v=1">
+</head>
+<body>
+  <div class="time-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div class="page-shell">
+    <header class="hero" id="inicio">
+      <div class="hero__content">
+        <p class="kicker"><span></span> Proyecto final · Prototipado</p>
+        <h1>El Archivo de la Historia: <em>ciclo completo de validación</em></h1>
+        <p class="hero__lead">
+          Entrega final del módulo: transformar una idea educativa en un prototipo tangible, testearlo con usuarios reales,
+          procesar el feedback y decidir cómo mejorar la propuesta en el siguiente ciclo de iteración.
+        </p>
+        <div class="hero-kpis" aria-label="Datos clave del proyecto final">
+          <span><strong>4</strong> fases completadas</span>
+          <span><strong>1</strong> ciclo de iteración</span>
+          <span><strong>6</strong> testers</span>
+          <span><strong>4</strong> hipótesis validadas</span>
+        </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#ciclo" data-go="ciclo"><i class="fa-solid fa-route"></i> Ver el ciclo</a>
+          <a class="btn btn--ghost" href="#conclusion" data-go="conclusion"><i class="fa-solid fa-flag-checkered"></i> Conclusión</a>
+        </div>
+      </div>
+
+      <aside class="summary-panel" aria-label="Resumen del proyecto final">
+        <div class="time-card">
+          <div class="time-card__ring"><i class="fa-solid fa-suitcase-rolling"></i></div>
+          <div><span>La Maleta del Tiempo</span><strong>Global Project prototipado</strong></div>
+        </div>
+        <h2>De la idea al aprendizaje validado</h2>
+        <p>
+          Escape room educativo inclusivo que combina narrativa histórica, retos STEAM, apoyos DUA y gamificación.
+          El prototipo permite comunicar la propuesta, observar su uso y aprender qué ajustar antes de escalar.
+        </p>
+        <div class="metric-grid">
+          <div class="metric"><strong>8</strong><span><i class="fa-solid fa-clock-rotate-left"></i> Eras históricas</span></div>
+          <div class="metric"><strong>23</strong><span><i class="fa-solid fa-universal-access"></i> Adaptaciones</span></div>
+          <div class="metric"><strong>DUA</strong><span><i class="fa-solid fa-layer-group"></i> Acceso múltiple</span></div>
+          <div class="metric"><strong>STEAM</strong><span><i class="fa-solid fa-flask-vial"></i> Retos activos</span></div>
+        </div>
+      </aside>
+    </header>
+
+    <section class="stats-bar" aria-label="Resumen ejecutivo">
+      <div class="stat"><strong>Tangibilizar</strong><span>Convertir la idea en una experiencia comunicable</span></div>
+      <div class="stat"><strong>Validar</strong><span>Comprobar hipótesis con usuarios reales</span></div>
+      <div class="stat"><strong>Procesar</strong><span>Ordenar el feedback en patrones accionables</span></div>
+      <div class="stat"><strong>Iterar</strong><span>Decidir mejoras para la siguiente versión</span></div>
+    </section>
+
+    <nav class="nav final-nav" aria-label="Navegación del proyecto final">
+      <button class="active" type="button" data-section="competencia"><i class="fa-solid fa-graduation-cap"></i><span><strong>Competencia</strong><small>Qué se ha desarrollado</small></span></button>
+      <button type="button" data-section="ciclo"><i class="fa-solid fa-arrows-spin"></i><span><strong>Ciclo</strong><small>Objetivo e hipótesis</small></span></button>
+      <button type="button" data-section="fase1"><i class="fa-solid fa-diagram-project"></i><span><strong>Fase 1</strong><small>Value Proposition Canvas</small></span></button>
+      <button type="button" data-section="fase2"><i class="fa-solid fa-suitcase"></i><span><strong>Fase 2</strong><small>Prototipo</small></span></button>
+      <button type="button" data-section="fase3"><i class="fa-solid fa-comments"></i><span><strong>Fase 3</strong><small>Matriz de feedback</small></span></button>
+      <button type="button" data-section="fase4"><i class="fa-solid fa-arrow-trend-up"></i><span><strong>Fase 4</strong><small>Aprendizaje validado</small></span></button>
+      <button type="button" data-section="opcional"><i class="fa-solid fa-plus"></i><span><strong>Opcional</strong><small>Ampliaciones</small></span></button>
+      <button type="button" data-section="conclusion"><i class="fa-solid fa-flag-checkered"></i><span><strong>Cierre</strong><small>Dificultades y decisiones</small></span></button>
+    </nav>
+
+    <main>
+      <section id="competencia" class="section active" aria-labelledby="competencia-title">
+        <div class="section-heading">
+          <div><span class="section-label">Competencia del módulo</span><h2 id="competencia-title">Prototipar, testear y aprender del feedback</h2></div>
+          <p>
+            A lo largo del módulo se ha desarrollado la competencia de crear un prototipo adecuado al contexto del proyecto
+            y de obtener y procesar el feedback de los usuarios que participan en el testeo para mejorar la propuesta.
+          </p>
+        </div>
+
+        <div class="final-competence-grid">
+          <article>
+            <h3><i class="fa-solid fa-cube" style="color:var(--amber);margin-right:8px;"></i> Tangibilizar la idea</h3>
+            <p>
+              La propuesta inicial se ha convertido en una microexperiencia observable: web prototipo, materiales físicos,
+              narrativa, roles, pistas graduadas y cierre con pasaporte de logro.
+            </p>
+          </article>
+          <article>
+            <h3><i class="fa-solid fa-users" style="color:var(--amber);margin-right:8px;"></i> Validar con usuarios</h3>
+            <p>
+              El prototipo ha permitido observar comprensión, participación, autonomía y emoción durante una sesión real
+              con alumnado y docente observador.
+            </p>
+          </article>
+          <article>
+            <h3><i class="fa-solid fa-rotate" style="color:var(--amber);margin-right:8px;"></i> Aprender e iterar</h3>
+            <p>
+              El feedback se ha organizado en matrices, hipótesis revisadas y decisiones concretas para la siguiente
+              versión del prototipo.
+            </p>
+          </article>
+        </div>
+
+        <div class="method-band" style="margin-top:24px;">
+          <div>
+            <span class="section-label">Descripción del proyecto</span>
+            <h3>Un Global Project que se explica por sí solo</h3>
+            <p>
+              <strong>El Archivo de la Historia</strong> es una propuesta educativa gamificada e inclusiva que presenta
+              los contenidos históricos como retos dentro de un viaje temporal. El objetivo del módulo ha sido concretar
+              la idea lo suficiente para que pueda comunicarse de forma ágil y efectiva, sin depender únicamente de una
+              explicación oral.
+            </p>
+          </div>
+          <div class="method-list">
+            <span><i class="fa-solid fa-gamepad"></i> Gamificación</span>
+            <span><i class="fa-solid fa-universal-access"></i> Accesibilidad</span>
+            <span><i class="fa-solid fa-laptop"></i> Prototipado digital</span>
+            <span><i class="fa-solid fa-comments"></i> Feedback de usuarios</span>
+            <span><i class="fa-solid fa-check-double"></i> Aprendizaje validado</span>
+            <span><i class="fa-solid fa-heart"></i> Educación inclusiva</span>
+          </div>
+        </div>
+
+        <div class="final-links" style="margin-top:24px;">
+          <a class="final-link-card" href="sprint1.html" target="_blank" rel="noopener">
+            <i class="fa-solid fa-diagram-project"></i>
+            <strong>Sprint 1 · VPC</strong>
+            <small>Value Proposition Canvas interactivo y priorización.</small>
+          </a>
+          <a class="final-link-card" href="sprint2.html" target="_blank" rel="noopener">
+            <i class="fa-solid fa-suitcase"></i>
+            <strong>Sprint 2 · Prototipo</strong>
+            <small>Microexperiencia testeable, hipótesis y plan de testeo.</small>
+          </a>
+          <a class="final-link-card" href="sprint3.html" target="_blank" rel="noopener">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <strong>Sprint 3 · Testeo</strong>
+            <small>Sesión, encuesta, plantillas y matriz de feedback.</small>
+          </a>
+          <a class="final-link-card" href="index.html" target="_blank" rel="noopener">
+            <i class="fa-solid fa-play"></i>
+            <strong>Prototipo base</strong>
+            <small>Primera versión navegable de La Maleta del Tiempo.</small>
+          </a>
+        </div>
+      </section>
+
+      <section id="ciclo" class="section" aria-labelledby="ciclo-title">
+        <div class="section-heading">
+          <div><span class="section-label">Ciclo de iteración</span><h2 id="ciclo-title">Objetivo, hipótesis y recorrido completo</h2></div>
+          <p>
+            El prototipado se ha entendido como un proceso iterativo de mejora continua. Este proyecto incluye un ciclo
+            completo: definir qué validar, construir una versión mínima, testear con usuarios y decidir ajustes.
+          </p>
+        </div>
+
+        <div class="s3-question-band">
+          <i class="fa-solid fa-bullseye"></i>
+          <div>
+            <span>Objetivo del ciclo</span>
+            <strong>Comprobar si una microexperiencia de La Maleta del Tiempo se entiende, invita a participar y genera valor educativo sin perder el reto.</strong>
+          </div>
+        </div>
+
+        <div class="final-cycle-band">
+          <article>
+            <span>Hipótesis central</span>
+            <h3>Reto accesible e inclusivo</h3>
+            <p>
+              Si la misión combina lenguaje claro, material manipulativo, roles visibles y pistas progresivas,
+              el alumnado participará con autonomía, colaboración y sensación de logro.
+            </p>
+          </article>
+          <article>
+            <span>Criterio de éxito</span>
+            <h3>Participación real</h3>
+            <p>
+              Al menos 5 de 6 personas entienden la misión con un máximo de una aclaración y cada participante
+              realiza una acción significativa durante el playtest.
+            </p>
+          </article>
+          <article>
+            <span>Decisión del ciclo</span>
+            <h3>Iterar con precisión</h3>
+            <p>
+              Conservar el núcleo narrativo y manipulativo, pero rediseñar la entrada, los roles, el sistema de pistas
+              y el cierre reflexivo antes de escalar a más eras.
+            </p>
+          </article>
+        </div>
+
+        <h3 class="s3-session-structure-title">Las cuatro fases del proyecto</h3>
+
+        <div class="final-phase-strip">
+          <article>
+            <span>1</span>
+            <h3>Value Proposition Canvas</h3>
+            <p>Definir el encaje entre necesidades del alumnado y la propuesta de valor del escape room inclusivo.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Creación del prototipo</h3>
+            <p>Materializar una misión mínima comunicable y observable con materiales físicos y soporte digital.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Matriz de feedback</h3>
+            <p>Recoger, ordenar y procesar impresiones de usuarios reales mediante distintas técnicas de testeo.</p>
+          </article>
+          <article>
+            <span>4</span>
+            <h3>Aprendizaje validado</h3>
+            <p>Reflexionar sobre lo aprendido y decidir qué ajustes incorporar en la siguiente iteración.</p>
+          </article>
+        </div>
+
+        <div class="prototype-flow">
+          <article class="flow-step"><span>1</span><h3>Definir</h3><p>Identificar qué puntos clave validar: comprensión, participación, accesibilidad y utilidad educativa.</p></article>
+          <article class="flow-step"><span>2</span><h3>Construir</h3><p>Crear una versión mínima del producto que pueda explicarse por sí sola a través del prototipo.</p></article>
+          <article class="flow-step"><span>3</span><h3>Testear</h3><p>Observar interacción real, registrar evidencias y contrastar hipótesis con datos cualitativos.</p></article>
+          <article class="flow-step"><span>4</span><h3>Aprender</h3><p>Transformar el feedback en decisiones de mejora para el siguiente ciclo de prototipado.</p></article>
+        </div>
+      </section>
+
+      <section id="fase1" class="section" aria-labelledby="fase1-title">
+        <div class="section-heading">
+          <div><span class="section-label">Fase 1</span><h2 id="fase1-title">Value Proposition Canvas</h2></div>
+          <p>
+            En el Sprint 1 se elaboró el canvas completo para conectar las necesidades del alumnado con la propuesta
+            de <strong>El Archivo de la Historia</strong>: trabajos, frustraciones, alegrías, productos, aliviadores y creadores de valor.
+          </p>
+        </div>
+
+        <div class="s3-protocol-grid">
+          <article>
+            <span class="s3-step">01</span>
+            <i class="fa-solid fa-user"></i>
+            <h3>Perfil del usuario</h3>
+            <p>Alumnado con diversidad de ritmos, capacidades y necesidades de apoyo que necesita comprender, actuar y colaborar.</p>
+          </article>
+          <article>
+            <span class="s3-step">02</span>
+            <i class="fa-solid fa-gift"></i>
+            <h3>Mapa de valor</h3>
+            <p>Escape room híbrido, retos STEAM multinivel, pistas progresivas, roles dignificantes y progreso visible.</p>
+          </article>
+          <article>
+            <span class="s3-step">03</span>
+            <i class="fa-solid fa-link"></i>
+            <h3>Encaje</h3>
+            <p>Pain clave: quedar fuera del grupo. Gain clave: participación real, digna y protagonista.</p>
+          </article>
+          <article>
+            <span class="s3-step">04</span>
+            <i class="fa-solid fa-arrow-up-wide-short"></i>
+            <h3>Priorización</h3>
+            <p>Se priorizaron comprensión, participación, autonomía guiada y reducción de barreras para el primer prototipo.</p>
+          </article>
+        </div>
+
+        <div class="fit-strip" style="margin-top:24px;">
+          <div>
+            <h3>Pain clave</h3>
+            <p>El alumnado puede quedar fuera de una experiencia motivadora si no está diseñada para su forma de comprender, comunicarse o participar.</p>
+          </div>
+          <div class="fit-strip__bridge" aria-hidden="true">Encaje</div>
+          <div>
+            <h3>Gain clave</h3>
+            <p>Participación real y protagonista: no solo estar presente, sino aportar, decidir, avanzar y sentirse capaz.</p>
+          </div>
+        </div>
+
+        <div class="result-bars-wrap" style="margin-top:24px;">
+          <h3>Elementos priorizados para el primer prototipo</h3>
+          <div class="result-bar-row"><span>Comprensión de la misión</span><div><b style="width:88%"></b></div><strong>88%</strong></div>
+          <div class="result-bar-row"><span>Participación inclusiva</span><div><b style="width:92%"></b></div><strong>92%</strong></div>
+          <div class="result-bar-row"><span>Autonomía guiada</span><div><b style="width:78%"></b></div><strong>78%</strong></div>
+          <div class="result-bar-row"><span>Reducción de barreras</span><div><b style="width:84%"></b></div><strong>84%</strong></div>
+        </div>
+
+        <div class="executive" style="margin-top:24px;">
+          <h2>Evidencia · Sprint 1</h2>
+          <p>
+            El canvas interactivo incluye 20 elementos de valor priorizados, 6 bloques del VPC y una recomendación de
+            microexperiencia inicial de 15-20 minutos. La decisión estratégica fue no prototipar todo el escape room,
+            sino validar primero el encaje problema-solución con una sola era histórica.
+          </p>
+          <a class="btn btn--primary" href="sprint1.html" target="_blank" rel="noopener" style="margin-top:16px;display:inline-flex;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Sprint 1 completo
+          </a>
+        </div>
+      </section>
+
+      <section id="fase2" class="section" aria-labelledby="fase2-title">
+        <div class="section-heading">
+          <div><span class="section-label">Fase 2</span><h2 id="fase2-title">Creación del prototipo</h2></div>
+          <p>
+            En el Sprint 2 se materializó la idea en una versión mínima del producto: una microexperiencia de
+            <strong>La Maleta del Tiempo</strong> con narrativa, materiales manipulativos, roles, pistas y cierre visible.
+          </p>
+        </div>
+
+        <div class="objective-grid">
+          <article class="objective-card">
+            <span class="card-icon"><i class="fa-solid fa-eye"></i></span>
+            <h3>Mostrar la experiencia</h3>
+            <p>Presentar una misión completa para que docentes y usuarios puedan imaginar el proyecto sin explicación extensa.</p>
+          </article>
+          <article class="objective-card">
+            <span class="card-icon"><i class="fa-solid fa-laptop"></i></span>
+            <h3>Prototipo digital navegable</h3>
+            <p>Web prototipo con flujo de usuario, mapa de eras, retos adaptados y sistema visual coherente.</p>
+          </article>
+          <article class="objective-card">
+            <span class="card-icon"><i class="fa-solid fa-puzzle-piece"></i></span>
+            <h3>Prototipo experiencial</h3>
+            <p>Carta de misión, piezas manipulativas, candado simbólico y pasaporte de logro para testeo en aula.</p>
+          </article>
+        </div>
+
+        <div class="method-band" style="margin-top:24px;">
+          <div>
+            <span class="section-label">Técnica de prototipado</span>
+            <h3>Baja-media fidelidad, alta capacidad de aprendizaje</h3>
+            <p>
+              Se eligió un prototipo híbrido (digital + experiencial) porque permite comunicar la propuesta a distancia
+              y, al mismo tiempo, observar interacción real con alumnado en contexto educativo.
+            </p>
+          </div>
+          <div class="method-list">
+            <span><i class="fa-solid fa-file-lines"></i> Carta en lectura fácil</span>
+            <span><i class="fa-solid fa-puzzle-piece"></i> Piezas manipulativas</span>
+            <span><i class="fa-solid fa-unlock-keyhole"></i> Validación simbólica</span>
+            <span><i class="fa-solid fa-passport"></i> Pasaporte de progreso</span>
+          </div>
+        </div>
+
+        <div class="hypothesis-grid" style="margin-top:24px;">
+          <article class="hypothesis-card">
+            <span>H1</span>
+            <h3>Comprensión</h3>
+            <p><strong>Si</strong> la misión usa instrucciones visuales y pasos cortos, <strong>entonces</strong> el alumnado comprenderá qué hacer sin depender constantemente del adulto.</p>
+          </article>
+          <article class="hypothesis-card">
+            <span>H2</span>
+            <h3>Participación</h3>
+            <p><strong>Si</strong> cada participante tiene un rol útil, <strong>entonces</strong> aumentará la participación real y se reducirán observadores pasivos.</p>
+          </article>
+          <article class="hypothesis-card">
+            <span>H3</span>
+            <h3>Reto accesible</h3>
+            <p><strong>Si</strong> el reto mantiene misterio y ofrece pistas graduadas, <strong>entonces</strong> la accesibilidad no reducirá la motivación.</p>
+          </article>
+          <article class="hypothesis-card">
+            <span>H4</span>
+            <h3>Logro visible</h3>
+            <p><strong>Si</strong> el avance se valida con un sello en el pasaporte, <strong>entonces</strong> el alumnado percibirá el logro de forma tangible.</p>
+          </article>
+        </div>
+
+        <div class="flow-map-board" style="margin-top:24px;">
+          <div class="flow-map-title">
+            <span class="section-label">Flujo prototipado</span>
+            <h3>Secuencia de la microexperiencia testeable</h3>
+          </div>
+          <div class="flow-map">
+            <article><i class="fa-solid fa-scroll"></i><strong>Entrada</strong><small>Carta de misión</small></article>
+            <i class="fa-solid fa-arrow-right"></i>
+            <article><i class="fa-solid fa-puzzle-piece"></i><strong>Reto</strong><small>Manipulación</small></article>
+            <i class="fa-solid fa-arrow-right"></i>
+            <article><i class="fa-solid fa-lightbulb"></i><strong>Pistas</strong><small>Ayuda graduada</small></article>
+            <i class="fa-solid fa-arrow-right"></i>
+            <article><i class="fa-solid fa-lock-open"></i><strong>Validación</strong><small>Candado simbólico</small></article>
+            <i class="fa-solid fa-arrow-right"></i>
+            <article><i class="fa-solid fa-stamp"></i><strong>Cierre</strong><small>Sello y pasaporte</small></article>
+          </div>
+        </div>
+
+        <div class="executive" style="margin-top:24px;">
+          <h2>Evidencia · Sprint 2</h2>
+          <p>
+            El Sprint 2 documenta el prototipo funcional, el plan de testeo, las hipótesis de validación, la rúbrica
+            de observación y los primeros aprendizajes del piloto. El MVP recomendado es una misión de 15-20 minutos
+            de una sola era histórica.
+          </p>
+          <a class="btn btn--primary" href="sprint2.html" target="_blank" rel="noopener" style="margin-top:16px;display:inline-flex;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Sprint 2 completo
+          </a>
+        </div>
+      </section>
+
+      <section id="fase3" class="section" aria-labelledby="fase3-title">
+        <div class="section-heading">
+          <div><span class="section-label">Fase 3</span><h2 id="fase3-title">Matriz de feedback</h2></div>
+          <p>
+            En el Sprint 3 se diseñó y ejecutó una sesión de testeo inclusiva. Se combinaron playtest, test de usuario,
+            focus group y entrevista cualitativa para obtener feedback procesable.
+          </p>
+        </div>
+
+        <div class="s3-session-map">
+          <article><b>5'</b><i class="fa-solid fa-handshake"></i><h3>Acogida</h3><p>Explicar que se prueba el juego, no a la persona.</p></article>
+          <article><b>5'</b><i class="fa-solid fa-scroll"></i><h3>Entrada</h3><p>Presentar carta y observar comprensión inicial.</p></article>
+          <article><b>20'</b><i class="fa-solid fa-puzzle-piece"></i><h3>Playtest</h3><p>Jugar sin interrupciones y registrar evidencias.</p></article>
+          <article><b>8'</b><i class="fa-solid fa-clipboard-question"></i><h3>Encuesta</h3><p>12 preguntas en formato claro y accesible.</p></article>
+          <article><b>7'</b><i class="fa-solid fa-comments"></i><h3>Debate</h3><p>Focus group para profundizar en disfrute y dificultad.</p></article>
+        </div>
+
+        <div class="final-validation-table-wrap" style="margin-top:24px;">
+          <table class="final-validation-table">
+            <thead>
+              <tr>
+                <th>Aspecto validado</th>
+                <th>Pregunta de validación</th>
+                <th>Aprendizaje obtenido</th>
+                <th>Ajuste previsto</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Propuesta de valor</strong></td>
+                <td>¿Se entiende qué aporta El Archivo de la Historia?</td>
+                <td>La idea se percibe como útil para trabajar contenidos de forma visual, motivadora e inclusiva.</td>
+                <td>Reforzar el uso docente y los beneficios para el alumnado.</td>
+              </tr>
+              <tr>
+                <td><strong>Comprensión inicial</strong></td>
+                <td>¿El grupo identifica la misión sin aclaraciones repetidas?</td>
+                <td>4 de 6 comprenden; dos requieren aclaración por exceso de texto en la carta.</td>
+                <td>Reducir la carta a una frase-objetivo y añadir tablero de secuencia.</td>
+              </tr>
+              <tr>
+                <td><strong>Participación</strong></td>
+                <td>¿Cada persona realiza una acción significativa?</td>
+                <td>Los roles y las piezas manipulativas facilitan la colaboración, pero un rol resulta ambiguo.</td>
+                <td>Nombrar roles con verbos de acción y tarjetas visuales.</td>
+              </tr>
+              <tr>
+                <td><strong>Accesibilidad</strong></td>
+                <td>¿Los apoyos permiten participar sin sustituir el reto?</td>
+                <td>Las pistas graduadas funcionan, pero cuesta pedir ayuda a tiempo.</td>
+                <td>Token visible de “pedir pista” y tres niveles más explícitos.</td>
+              </tr>
+              <tr>
+                <td><strong>Motivación</strong></td>
+                <td>¿La narrativa y el cierre generan interés por continuar?</td>
+                <td>El sello y el pasaporte activan orgullo y demanda espontánea de otra era.</td>
+                <td>Reservar tiempo para cierre reflexivo y celebración del logro.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="s3-feedback-matrix s3-large-matrix" style="margin-top:24px;">
+          <article class="works">
+            <h4><i class="fa-solid fa-check"></i> Qué funciona</h4>
+            <p>El juego entra por la emoción y la acción, no por una explicación larga.</p>
+            <ul>
+              <li>Sobre, sello y mapa sitúan la misión.</li>
+              <li>Piezas físicas hacen visible la colaboración.</li>
+              <li>La recompensa final genera orgullo y continuidad.</li>
+            </ul>
+          </article>
+          <article class="improve">
+            <h4><i class="fa-solid fa-screwdriver-wrench"></i> Qué mejorar</h4>
+            <p>La accesibilidad cognitiva debe empezar antes del reto, en la primera consigna.</p>
+            <ul>
+              <li>Reducir la carta a una frase-objetivo.</li>
+              <li>Convertir roles en verbos y acciones.</li>
+              <li>Mejorar contraste y secuencia de pistas.</li>
+            </ul>
+          </article>
+          <article class="questions">
+            <h4><i class="fa-solid fa-circle-question"></i> Preguntas abiertas</h4>
+            <p>Se documentan incertidumbres para el siguiente test.</p>
+            <ul>
+              <li>¿La versión resumida permite 90% de comprensión inicial?</li>
+              <li>¿El token de pista reduce la espera?</li>
+              <li>¿El cierre guiado fortalece el recuerdo?</li>
+            </ul>
+          </article>
+          <article class="ideas">
+            <h4><i class="fa-solid fa-lightbulb"></i> Ideas</h4>
+            <p>Propuestas conectadas directamente con evidencias del testeo.</p>
+            <ul>
+              <li>Tablero visual “Misión · Reto · Pista · Sello”.</li>
+              <li>Tarjetas de rol: buscar, ordenar, comprobar, contar.</li>
+              <li>Dos niveles de reto con la misma narrativa.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="executive" style="margin-top:24px;">
+          <h2>Evidencia · Sprint 3</h2>
+          <p>
+            El Sprint 3 incluye la encuesta de 12 preguntas, 7 plantillas web cumplimentadas, matriz de hipótesis,
+            matriz DAFO y la síntesis del feedback procesado. La media ilustrativa de las escalas cuantitativas es 4,2/5.
+          </p>
+          <a class="btn btn--primary" href="sprint3.html" target="_blank" rel="noopener" style="margin-top:16px;display:inline-flex;">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Sprint 3 completo
+          </a>
+        </div>
+      </section>
+
+      <section id="fase4" class="section" aria-labelledby="fase4-title">
+        <div class="section-heading">
+          <div><span class="section-label">Fase 4</span><h2 id="fase4-title">Aprendizaje validado y ajustes del prototipo</h2></div>
+          <p>
+            La fase final reflexiona sobre qué se ha aprendido durante el ciclo completo y qué decisiones se tomarán
+            para mejorar la próxima versión del prototipo.
+          </p>
+        </div>
+
+        <div class="s3-synthesis-grid">
+          <article>
+            <span class="section-label">Objetivo del ciclo</span>
+            <h3>Parcialmente cumplido</h3>
+            <p>La microexperiencia permite comprensión y participación, pero la entrada todavía requiere una aclaración extra en parte de la muestra.</p>
+          </article>
+          <article>
+            <span class="section-label">Aprendizaje validado</span>
+            <h3>El núcleo tiene valor</h3>
+            <p>La combinación de narrativa, manipulación, cooperación y logro visible es atractiva; el diseño de apoyos necesita una iteración más fina.</p>
+          </article>
+          <article>
+            <span class="section-label">Evidencia para volver a probar</span>
+            <h3>Una mejora, un indicador</h3>
+            <p>Reducir texto + tarjeta de inicio → al menos 5 de 6 personas identifican por sí mismas la primera acción.</p>
+          </article>
+        </div>
+
+        <div class="s3-hypothesis-list" style="margin-top:24px;">
+          <article>
+            <span class="s3-hyp-number">H1</span>
+            <div><h4>La carta en lectura fácil permite iniciar con autonomía.</h4><p><strong>Evidencia:</strong> 4 de 6 comprenden; dos requieren aclaración.</p></div>
+            <span class="s3-verdict partial">Parcial</span>
+            <div class="s3-plusminus"><span><b>+</b> El mapa da contexto.</span><span><b>−</b> La primera instrucción pesa demasiado.</span></div>
+          </article>
+          <article>
+            <span class="s3-hyp-number">H2</span>
+            <div><h4>El reto manipulativo y los roles aumentan la participación real.</h4><p><strong>Evidencia:</strong> las 6 personas realizan una acción; un rol requiere mayor concreción.</p></div>
+            <span class="s3-verdict yes">Validada</span>
+            <div class="s3-plusminus"><span><b>+</b> Todos aportan algo visible.</span><span><b>−</b> “Guardián” es ambiguo.</span></div>
+          </article>
+          <article>
+            <span class="s3-hyp-number">H3</span>
+            <div><h4>Las pistas graduadas reducen frustración sin eliminar el reto.</h4><p><strong>Evidencia:</strong> se completa con dos pistas; existe demora para pedir la primera.</p></div>
+            <span class="s3-verdict partial">Parcial</span>
+            <div class="s3-plusminus"><span><b>+</b> La pista visual orienta bien.</span><span><b>−</b> Falta normalizar pedir ayuda.</span></div>
+          </article>
+          <article>
+            <span class="s3-hyp-number">H4</span>
+            <div><h4>Pasaporte y sello incrementan el deseo de continuar.</h4><p><strong>Evidencia:</strong> intención media de 4,3/5 y demanda espontánea de otra era.</p></div>
+            <span class="s3-verdict yes">Validada</span>
+            <div class="s3-plusminus"><span><b>+</b> El logro se recuerda y comparte.</span><span><b>−</b> Falta reflexión final.</span></div>
+          </article>
+        </div>
+
+        <div class="s3-decision-grid" style="margin-top:24px;">
+          <article><i class="fa-solid fa-ban"></i><span>Descartar</span><h3>No procede</h3><p>La experiencia muestra interés, participación y valor educativo; no hay evidencia para abandonar el concepto.</p></article>
+          <article class="recommended"><i class="fa-solid fa-rotate"></i><span>Decisión</span><h3>Iterar</h3><p>Conservar el núcleo y rediseñar instrucciones, roles, sistema de pistas y cierre reflexivo.</p></article>
+          <article><i class="fa-solid fa-rocket"></i><span>Escalar</span><h3>Todavía no</h3><p>Crear todas las eras ahora extendería barreras no resueltas. Primero se valida la segunda versión.</p></article>
+        </div>
+
+        <div class="s3-iteration-roadmap" style="margin-top:24px;">
+          <div><span class="section-label">Segundo ciclo</span><h3>Plan de mejora y nuevo test</h3></div>
+          <ol>
+            <li><b>Rediseñar</b><span>Carta en una frase, tablero de secuencia, roles con acción y token de pista.</span></li>
+            <li><b>Probar</b><span>Misma misión con 6 nuevos testers o contrabalanceando la versión anterior.</span></li>
+            <li><b>Medir</b><span>Comprensión inicial, uso autónomo de pistas, acción significativa y recuerdo final.</span></li>
+            <li><b>Decidir</b><span>Escalar el patrón solo si los indicadores alcanzan el umbral acordado.</span></li>
+          </ol>
+        </div>
+
+        <div class="iteration-grid" style="margin-top:24px;">
+          <article class="iteration-card"><span>1</span><h3>Entrada más clara</h3><p>Separar narrativa de instrucción y reforzar la primera acción con pictogramas.</p></article>
+          <article class="iteration-card"><span>2</span><h3>Roles visibles</h3><p>Convertir cada rol en una acción física observable para evitar participación desigual.</p></article>
+          <article class="iteration-card"><span>3</span><h3>Sistema de pistas</h3><p>Normalizar pedir ayuda con token visible y tres niveles más explícitos.</p></article>
+          <article class="iteration-card"><span>4</span><h3>Guía docente</h3><p>Crear orientaciones de uso, adaptaciones, evaluación y criterios de éxito para el aula.</p></article>
+        </div>
+      </section>
+
+      <section id="opcional" class="section" aria-labelledby="opcional-title">
+        <div class="section-heading">
+          <div><span class="section-label">Actividades opcionales</span><h2 id="opcional-title">Ampliaciones integradas en el proyecto</h2></div>
+          <p>
+            Además de las cuatro fases principales, se han incorporado elementos opcionales que refuerzan el análisis
+            y la toma de decisiones del ciclo de prototipado.
+          </p>
+        </div>
+
+        <div class="final-optional-grid">
+          <article>
+            <div class="card-icon"><i class="fa-solid fa-arrow-up-wide-short"></i></div>
+            <h3>Priorización del VPC</h3>
+            <p>
+              En el Sprint 1 se ordenaron trabajos, frustraciones y alegrías por importancia para decidir qué debía
+              entrar en el primer prototipo. Esto evitó intentar validar todo el escape room a la vez.
+            </p>
+          </article>
+          <article>
+            <div class="card-icon"><i class="fa-solid fa-video"></i></div>
+            <h3>Explicación del prototipo</h3>
+            <p>
+              La web prototipo funciona como soporte visual para explicar la idea de forma ordenada y comprensible.
+              Permite que la propuesta se entienda sin depender únicamente de una presentación oral o un vídeo externo.
+            </p>
+          </article>
+          <article>
+            <div class="card-icon"><i class="fa-solid fa-flask"></i></div>
+            <h3>Matriz de hipótesis y DAFO</h3>
+            <p>
+              En el Sprint 3 se contrastaron las hipótesis iniciales con evidencias del testeo y se elaboró una matriz
+              DAFO para evaluar fortalezas, debilidades, oportunidades y amenazas de la microexperiencia.
+            </p>
+          </article>
+        </div>
+
+        <div class="s3-dafo-grid" style="margin-top:24px;">
+          <article class="strength"><h4>Fortalezas</h4><ul><li>Narrativa histórica con propósito claro.</li><li>Material manipulativo y apoyos DUA.</li><li>Participación distribuida y logro visible.</li></ul></article>
+          <article class="opportunity"><h4>Oportunidades</h4><ul><li>Crear más eras con el mismo patrón.</li><li>Integrar evaluación competencial y STEAM.</li><li>Ofrecer guía docente reutilizable.</li></ul></article>
+          <article class="weakness"><h4>Debilidades</h4><ul><li>Entrada narrativa aún densa.</li><li>Algunos roles y símbolos son ambiguos.</li><li>El cierre reflexivo necesita más tiempo.</li></ul></article>
+          <article class="threat"><h4>Amenazas</h4><ul><li>Si el adulto sustituye la acción, disminuye autonomía.</li><li>El grupo o tiempo disponible puede variar mucho.</li><li>Escalar sin iterar amplificaría las barreras.</li></ul></article>
+        </div>
+      </section>
+
+      <section id="conclusion" class="section" aria-labelledby="conclusion-title">
+        <div class="section-heading">
+          <div><span class="section-label">Cierre del módulo</span><h2 id="conclusion-title">Dificultades, reflexiones y decisiones</h2></div>
+          <p>
+            Los criterios de entrega piden identificar las dificultades surgidas durante el proceso y las reflexiones
+            o decisiones tomadas. Esto facilita reconocer impedimentos y resolverlos en proyectos posteriores.
+          </p>
+        </div>
+
+        <div class="final-accordion">
+          <details open>
+            <summary>Dificultad 1 · Concretar una idea amplia <i class="fa-solid fa-plus"></i></summary>
+            <div class="final-accordion-body">
+              El Archivo de la Historia puede crecer en muchas direcciones: historia, gamificación, accesibilidad,
+              retos, personajes, recursos docentes y materiales físicos. La principal dificultad fue reducir la idea
+              a una versión mínima comunicable. <strong>Decisión:</strong> priorizar estructura, navegación y una
+              muestra representativa de actividades antes de desarrollar todo el contenido final.
+            </div>
+          </details>
+          <details>
+            <summary>Dificultad 2 · Diseñar para usuarios diversos <i class="fa-solid fa-plus"></i></summary>
+            <div class="final-accordion-body">
+              Al tratarse de una propuesta inclusiva, el diseño debía contemplar diferentes ritmos, capacidades y
+              necesidades de comprensión. <strong>Decisión:</strong> avanzar hacia un diseño más limpio, guiado y
+              accesible, con apoyos visuales constantes y lenguaje claro.
+            </div>
+          </details>
+          <details>
+            <summary>Dificultad 3 · Equilibrar estética y funcionalidad <i class="fa-solid fa-plus"></i></summary>
+            <div class="final-accordion-body">
+              El proyecto necesitaba una identidad visual atractiva sin dificultar la comprensión.
+              <strong>Decisión:</strong> mantener una estética narrativa y cálida, pero reforzar claridad, contraste,
+              bloques de información y jerarquía visual.
+            </div>
+          </details>
+          <details>
+            <summary>Dificultad 4 · Traducir el feedback en mejoras concretas <i class="fa-solid fa-plus"></i></summary>
+            <div class="final-accordion-body">
+              No todo el feedback tiene el mismo peso. <strong>Decisión:</strong> priorizar aquello que afecta
+              directamente a la comprensión, la navegación, la accesibilidad y la utilidad educativa. Las mejoras
+              se han organizado en un plan de iteración con indicadores medibles.
+            </div>
+          </details>
+          <details>
+            <summary>Dificultad 5 · Coordinar prototipo digital y experiencial <i class="fa-solid fa-plus"></i></summary>
+            <div class="final-accordion-body">
+              Mantener coherencia entre la web prototipo y los materiales físicos exigió decisiones de alcance.
+              <strong>Decisión:</strong> usar el prototipo digital para comunicar y el experiencial para validar
+              comportamiento real en aula.
+            </div>
+          </details>
+        </div>
+
+        <div class="final-reflection-grid" style="margin-top:24px;">
+          <article>
+            <h3>Reflexión principal</h3>
+            <p>
+              El valor del proyecto no está únicamente en la idea, sino en cómo se presenta, cómo se guía al usuario
+              y cómo se adapta a sus necesidades reales.
+            </p>
+          </article>
+          <article>
+            <h3>Decisión estratégica</h3>
+            <p>
+              La siguiente iteración no debe añadir más contenido, sino mejorar la experiencia de uso: instrucciones,
+              navegación, apoyos visuales y materiales de acompañamiento docente.
+            </p>
+          </article>
+          <article>
+            <h3>Aprendizaje transferible</h3>
+            <p>
+              El prototipado no consiste en construir una primera versión, sino en aprender a partir de ella. Este
+              ciclo puede replicarse en futuros proyectos educativos con distintos contenidos.
+            </p>
+          </article>
+        </div>
+
+        <div class="executive s3-executive" style="margin-top:24px;">
+          <h2>Conclusión final del proyecto</h2>
+          <p>
+            El desarrollo de <strong>El Archivo de la Historia</strong> durante este módulo ha permitido transformar
+            una idea educativa en un prototipo tangible, visual y validable. Gracias al Value Proposition Canvas,
+            el prototipo funcional y la matriz de feedback, se ha comprendido mejor qué aporta el proyecto, qué
+            aspectos funcionan y qué decisiones deben tomarse para seguir mejorándolo.
+          </p>
+          <p>
+            La principal conclusión es que el proyecto tiene potencial como recurso educativo gamificado e inclusivo,
+            pero su evolución debe centrarse en mejorar la claridad, la accesibilidad, la autonomía del usuario y la
+            aplicación docente. La siguiente iteración reforzará la guía de uso, los apoyos visuales, la estructura
+            de retos y los materiales complementarios para acercar el producto a una versión más madura y aplicable
+            en contextos educativos reales.
+          </p>
+          <button class="btn btn--primary" type="button" data-print><i class="fa-solid fa-print"></i> Imprimir / guardar en PDF</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="final.js?v=1"></script>
+</body>
+</html>

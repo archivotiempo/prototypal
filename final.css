@@ -1,0 +1,297 @@
+/* Proyecto final: extiende el sistema visual compartido de los sprints. */
+.final-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.final-phase-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.final-phase-strip article {
+  position: relative;
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, .05);
+  padding: 22px 20px 20px;
+  min-height: 168px;
+}
+
+.final-phase-strip span {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--amber);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.final-phase-strip h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.final-phase-strip p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.final-links {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.final-link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 148px;
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, .05);
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+.final-link-card:hover {
+  transform: translateY(-2px);
+  border-color: #fde68a;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, .08);
+}
+
+.final-link-card i {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 12px;
+  background: var(--amber-soft);
+  color: var(--amber);
+  font-size: 18px;
+}
+
+.final-link-card strong {
+  display: block;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.final-link-card small {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.final-competence-grid,
+.final-reflection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.final-competence-grid article,
+.final-reflection-grid article {
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, .05);
+  padding: 22px;
+}
+
+.final-competence-grid h3,
+.final-reflection-grid h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.final-competence-grid p,
+.final-reflection-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.final-cycle-band {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.final-cycle-band article {
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  background: linear-gradient(180deg, #fffbeb, #fff);
+}
+
+.final-cycle-band span {
+  display: block;
+  color: var(--amber);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.final-cycle-band h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.final-cycle-band p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.final-accordion {
+  display: grid;
+  gap: 12px;
+}
+
+.final-accordion details {
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.final-accordion summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 18px 20px;
+  font-weight: 800;
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.final-accordion summary::-webkit-details-marker { display: none; }
+
+.final-accordion summary i {
+  color: var(--amber);
+  transition: transform var(--transition);
+}
+
+.final-accordion details[open] summary i {
+  transform: rotate(45deg);
+}
+
+.final-accordion .final-accordion-body {
+  padding: 0 20px 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.final-optional-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.final-optional-grid article {
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+  padding: 22px;
+  min-height: 220px;
+}
+
+.final-optional-grid .card-icon {
+  display: grid;
+  width: 47px;
+  height: 47px;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--blue-soft);
+  color: var(--blue);
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.final-optional-grid h3 {
+  margin: 0 0 10px;
+  font-size: 19px;
+}
+
+.final-optional-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.final-validation-table-wrap {
+  overflow-x: auto;
+  border: 1.5px solid var(--border);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.final-validation-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.final-validation-table th,
+.final-validation-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.final-validation-table th {
+  background: var(--amber-soft);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.final-validation-table td {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.final-validation-table tr:last-child td {
+  border-bottom: 0;
+}
+
+@media (max-width: 1080px) {
+  .final-nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .final-phase-strip,
+  .final-links,
+  .final-competence-grid,
+  .final-reflection-grid,
+  .final-cycle-band,
+  .final-optional-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 720px) {
+  .final-phase-strip,
+  .final-links,
+  .final-competence-grid,
+  .final-reflection-grid,
+  .final-cycle-band,
+  .final-optional-grid { grid-template-columns: 1fr; }
+}
