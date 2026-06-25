@@ -2271,12 +2271,85 @@ h1 em {
   }
 }
 
+.project-dock {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0 0 22px;
+  padding: 14px;
+  border: 1.5px solid #fde68a;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #fffbeb, #fff);
+  box-shadow: 0 8px 20px rgba(15, 23, 42, .06);
+}
+
+.project-dock a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 58px;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+.project-dock a:hover,
+.project-dock a.is-here {
+  border-color: #fbbf24;
+  box-shadow: 0 8px 18px rgba(180, 83, 9, .12);
+  transform: translateY(-1px);
+}
+
+.project-dock a.is-here {
+  background: linear-gradient(135deg, #fffbeb, #fff);
+}
+
+.project-dock i {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.project-dock strong {
+  display: block;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.project-dock small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 1080px) {
+  .project-dock {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .project-dock {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media print {
   body { background: white; }
   body::before,
   body::after,
   .time-orbit,
   .nav,
+  .project-dock,
   .hero__actions,
   .tabs { display: none !important; }
   .page-shell { width: 100%; padding: 0; }
